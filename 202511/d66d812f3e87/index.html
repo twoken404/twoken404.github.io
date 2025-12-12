@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"let-ai.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.26.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3973904360441679"
+     crossorigin="anonymous"></script>
+
+    <meta name="description" content="一个简单高效的Python工具，用于清理ASS和SRT字幕文件，提取纯文本台词，去除所有格式标记、时间码和特效代码。 🎯 项目简介在日常的视频处理、字幕制作或文本分析工作中，我们经常需要从字幕文件中提取纯文本内容。然而，原始的字幕文件包含大量的格式信息（如时间码、样式定义、特效代码等），这些信息会干扰我们对纯文本内容的使用。这个工具可以自动批量处理ASS和SRT字幕文件，提取干净的台词文本。 ✨">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI大模型分析电影写微小说项目：字幕文件清理工具 - Subtitle Cleaner">
+<meta property="og:url" content="http://let-ai.com/202511/d66d812f3e87/index.html">
+<meta property="og:site_name" content="AI微小说">
+<meta property="og:description" content="一个简单高效的Python工具，用于清理ASS和SRT字幕文件，提取纯文本台词，去除所有格式标记、时间码和特效代码。 🎯 项目简介在日常的视频处理、字幕制作或文本分析工作中，我们经常需要从字幕文件中提取纯文本内容。然而，原始的字幕文件包含大量的格式信息（如时间码、样式定义、特效代码等），这些信息会干扰我们对纯文本内容的使用。这个工具可以自动批量处理ASS和SRT字幕文件，提取干净的台词文本。 ✨">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-11-01T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-12-12T04:55:02.395Z">
+<meta property="article:author" content="twoken">
+<meta property="article:tag" content="openai,claude,modelscope,coze,微小说">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://let-ai.com/202511/d66d812f3e87/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://let-ai.com/202511/d66d812f3e87/","path":"202511/d66d812f3e87/","title":"AI大模型分析电影写微小说项目：字幕文件清理工具 - Subtitle Cleaner"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>AI大模型分析电影写微小说项目：字幕文件清理工具 - Subtitle Cleaner | AI微小说</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WJ48W3LM1R"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-WJ48W3LM1R","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js" defer></script>
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">AI微小说</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">大模型写微小说</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text"></span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8E%AF-%E9%A1%B9%E7%9B%AE%E7%AE%80%E4%BB%8B"><span class="nav-number">1.1.</span> <span class="nav-text">🎯 项目简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%9C%A8-%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD"><span class="nav-number">1.2.</span> <span class="nav-text">✨ 主要功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%81-%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84"><span class="nav-number">1.3.</span> <span class="nav-text">📁 项目结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%9A%80-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B"><span class="nav-number">1.4.</span> <span class="nav-text">🚀 快速开始</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E8%A6%81%E6%B1%82"><span class="nav-number">1.4.1.</span> <span class="nav-text">安装要求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">1.4.2.</span> <span class="nav-text">使用方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C%E7%A4%BA%E4%BE%8B"><span class="nav-number">1.4.3.</span> <span class="nav-text">运行示例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%94%A7-%E6%8A%80%E6%9C%AF%E7%89%B9%E7%82%B9"><span class="nav-number">1.5.</span> <span class="nav-text">🔧 技术特点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ASS%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86%E9%80%BB%E8%BE%91"><span class="nav-number">1.5.1.</span> <span class="nav-text">ASS文件处理逻辑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SRT%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86%E9%80%BB%E8%BE%91"><span class="nav-number">1.5.2.</span> <span class="nav-text">SRT文件处理逻辑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%96%E7%A0%81%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6"><span class="nav-number">1.5.3.</span> <span class="nav-text">编码处理机制</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%92%A1-%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">1.6.</span> <span class="nav-text">💡 应用场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%9D-%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B"><span class="nav-number">1.7.</span> <span class="nav-text">📝 代码示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%94%84-%E6%89%A9%E5%B1%95%E6%80%A7"><span class="nav-number">1.8.</span> <span class="nav-text">🔄 扩展性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%8A-%E6%80%A7%E8%83%BD%E7%89%B9%E7%82%B9"><span class="nav-number">1.9.</span> <span class="nav-text">📊 性能特点</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">twoken</p>
+  <div class="site-description" itemprop="description">项目简介：本项目将电影台词转化为AI文学创作的灵感源泉。系统通过三个核心模块：1. 字幕抓取与清洗 → 获得纯净文本；2. 台词分段与解析 → 理解电影语境 ；3. AI识别与创作 → 输出微小说。实现从影视语言到文学作品的智能转换。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/twoken404" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;twoken404" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/twoken" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;twoken" rel="noopener me" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.facebook.com/twoken" title="FB Page → https:&#x2F;&#x2F;www.facebook.com&#x2F;twoken" rel="noopener me" target="_blank"><i class="fab fa-facebook fa-fw"></i>FB Page</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://let-ai.com/202511/d66d812f3e87/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="twoken">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AI微小说">
+      <meta itemprop="description" content="项目简介：本项目将电影台词转化为AI文学创作的灵感源泉。系统通过三个核心模块：1. 字幕抓取与清洗 → 获得纯净文本；2. 台词分段与解析 → 理解电影语境 ；3. AI识别与创作 → 输出微小说。实现从影视语言到文学作品的智能转换。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="AI大模型分析电影写微小说项目：字幕文件清理工具 - Subtitle Cleaner | AI微小说">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          AI大模型分析电影写微小说项目：字幕文件清理工具 - Subtitle Cleaner
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2025-11-02 00:00:00" itemprop="dateCreated datePublished" datetime="2025-11-02T00:00:00+08:00">2025-11-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2025-12-12 12:55:02" itemprop="dateModified" datetime="2025-12-12T12:55:02+08:00">2025-12-12</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id=""><a href="#" class="headerlink" title=""></a></h1><p>一个简单高效的Python工具，用于清理ASS和SRT字幕文件，提取纯文本台词，去除所有格式标记、时间码和特效代码。</p>
+<h2 id="🎯-项目简介"><a href="#🎯-项目简介" class="headerlink" title="🎯 项目简介"></a>🎯 项目简介</h2><p>在日常的视频处理、字幕制作或文本分析工作中，我们经常需要从字幕文件中提取纯文本内容。然而，原始的字幕文件包含大量的格式信息（如时间码、样式定义、特效代码等），这些信息会干扰我们对纯文本内容的使用。这个工具可以自动批量处理ASS和SRT字幕文件，提取干净的台词文本。</p>
+<h2 id="✨-主要功能"><a href="#✨-主要功能" class="headerlink" title="✨ 主要功能"></a>✨ 主要功能</h2><ul>
+<li><strong>支持多种格式</strong>：自动识别并处理ASS和SRT两种主流字幕格式</li>
+<li><strong>智能清理</strong>：<ul>
+<li>ASS文件：去除<code>[Script Info]</code>、<code>[V4 Styles]</code>、<code>Format:</code>等格式信息</li>
+<li>SRT文件：去除序号、时间码行（如<code>00:00:24,290 --&gt; 00:00:27,700</code>）</li>
+<li>通用处理：去除所有花括号内的特效代码（如<code>{\3c&amp;HFF8000&amp;}</code>）</li>
+</ul>
+</li>
+<li><strong>批量处理</strong>：一键处理整个文件夹中的所有字幕文件</li>
+<li><strong>编码兼容</strong>：自动检测并处理UTF-8、GBK、GB2312、UTF-16等多种编码</li>
+<li><strong>保持原结构</strong>：按原始文件名生成对应的清理后文件</li>
+</ul>
+<h2 id="📁-项目结构"><a href="#📁-项目结构" class="headerlink" title="📁 项目结构"></a>📁 项目结构</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">subtitle-cleaner/</span><br><span class="line">├── clean_subtitles.py    # 主程序文件</span><br><span class="line">├── download_srt/         # （输入）原始字幕文件存放目录</span><br><span class="line">│   ├── video1.ass</span><br><span class="line">│   ├── video2.srt</span><br><span class="line">│   └── ...</span><br><span class="line">└── cleaned_srt/          # （输出）清理后的文本文件目录</span><br><span class="line">    ├── video1_cleaned.txt</span><br><span class="line">    ├── video2_cleaned.txt</span><br><span class="line">    └── ...</span><br></pre></td></tr></table></figure>
+
+<h2 id="🚀-快速开始"><a href="#🚀-快速开始" class="headerlink" title="🚀 快速开始"></a>🚀 快速开始</h2><h3 id="安装要求"><a href="#安装要求" class="headerlink" title="安装要求"></a>安装要求</h3><ul>
+<li>Python 3.6+</li>
+<li>无需安装额外依赖库</li>
+</ul>
+<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><ol>
+<li><p><strong>准备文件</strong>：将所有要处理的ASS和SRT字幕文件放入<code>download_srt</code>文件夹</p>
+</li>
+<li><p><strong>运行脚本</strong>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python clean_subtitles.py</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>查看结果</strong>：清理后的纯文本文件将保存在<code>cleaned_srt</code>文件夹中</p>
+</li>
+</ol>
+<h3 id="运行示例"><a href="#运行示例" class="headerlink" title="运行示例"></a>运行示例</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">输入文件夹: download_srt</span><br><span class="line">输出文件夹: cleaned_srt</span><br><span class="line">开始处理字幕文件...</span><br><span class="line">已处理: example.ass -&gt; example_cleaned.txt</span><br><span class="line">生成台词: 5 行</span><br><span class="line">前几句台词:</span><br><span class="line">  1. 明朝景泰年间 宦官专权</span><br><span class="line">  2. 在京城设立十二监 十三库</span><br><span class="line">  3. 四司 八局及二十四衙门</span><br><span class="line">--------------------------------------------------</span><br><span class="line">处理完成！共处理 1 个字幕文件</span><br><span class="line">清理后的文件保存在: cleaned_srt</span><br></pre></td></tr></table></figure>
+
+<h2 id="🔧-技术特点"><a href="#🔧-技术特点" class="headerlink" title="🔧 技术特点"></a>🔧 技术特点</h2><h3 id="ASS文件处理逻辑"><a href="#ASS文件处理逻辑" class="headerlink" title="ASS文件处理逻辑"></a>ASS文件处理逻辑</h3><ol>
+<li>只提取以<code>Dialogue:</code>开头的行</li>
+<li>分割并获取第10个逗号后的文本内容</li>
+<li>去除所有<code>{...}</code>格式的特效代码</li>
+</ol>
+<h3 id="SRT文件处理逻辑"><a href="#SRT文件处理逻辑" class="headerlink" title="SRT文件处理逻辑"></a>SRT文件处理逻辑</h3><ol>
+<li>跳过纯数字的序号行</li>
+<li>跳过包含<code>--&gt;</code>的时间码行</li>
+<li>保留纯文本台词行，同样去除特效代码</li>
+</ol>
+<h3 id="编码处理机制"><a href="#编码处理机制" class="headerlink" title="编码处理机制"></a>编码处理机制</h3><p>脚本会自动尝试多种编码格式读取文件：</p>
+<ul>
+<li>UTF-8</li>
+<li>GBK</li>
+<li>GB2312</li>
+<li>UTF-16</li>
+</ul>
+<h2 id="💡-应用场景"><a href="#💡-应用场景" class="headerlink" title="💡 应用场景"></a>💡 应用场景</h2><ol>
+<li><strong>视频内容分析</strong>：提取视频对话用于文本分析</li>
+<li><strong>字幕翻译辅助</strong>：获取干净文本进行翻译</li>
+<li><strong>学习笔记制作</strong>：从教学视频中提取讲解内容</li>
+<li><strong>内容摘要生成</strong>：基于字幕文本生成视频摘要</li>
+<li><strong>语音识别校对</strong>：对比语音识别结果与原始字幕</li>
+</ol>
+<h2 id="📝-代码示例"><a href="#📝-代码示例" class="headerlink" title="📝 代码示例"></a>📝 代码示例</h2><p>核心清理函数：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">clean_srt_content</span>(<span class="params">content</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;清理SRT字幕文件内容&quot;&quot;&quot;</span></span><br><span class="line">    lines = content.split(<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">    cleaned_lines = []</span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    n = <span class="built_in">len</span>(lines)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span> i &lt; n:</span><br><span class="line">        line = lines[i].strip()</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 跳过序号行和时间码行</span></span><br><span class="line">        <span class="keyword">if</span> line.isdigit() <span class="keyword">or</span> <span class="string">&#x27;--&gt;&#x27;</span> <span class="keyword">in</span> line:</span><br><span class="line">            i += <span class="number">1</span></span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">            </span><br><span class="line">        <span class="comment"># 保留并清理台词行</span></span><br><span class="line">        <span class="keyword">if</span> line:</span><br><span class="line">            line = re.sub(<span class="string">r&#x27;\&#123;[^&#125;]*\&#125;&#x27;</span>, <span class="string">&#x27;&#x27;</span>, line)</span><br><span class="line">            line = line.strip()</span><br><span class="line">            <span class="keyword">if</span> line:</span><br><span class="line">                cleaned_lines.append(line)</span><br><span class="line">        </span><br><span class="line">        i += <span class="number">1</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;\n&#x27;</span>.join(cleaned_lines)</span><br></pre></td></tr></table></figure>
+
+<h2 id="🔄-扩展性"><a href="#🔄-扩展性" class="headerlink" title="🔄 扩展性"></a>🔄 扩展性</h2><p>项目具有良好的扩展性，可以轻松添加以下功能：</p>
+<ol>
+<li><strong>支持更多字幕格式</strong>：如SSA、VTT等</li>
+<li><strong>添加文本后处理</strong>：如去除广告词、标准化标点</li>
+<li><strong>集成翻译API</strong>：自动翻译提取的文本</li>
+<li><strong>导出多种格式</strong>：如JSON、CSV、Markdown</li>
+</ol>
+<h2 id="📊-性能特点"><a href="#📊-性能特点" class="headerlink" title="📊 性能特点"></a>📊 性能特点</h2><ul>
+<li><strong>高效处理</strong>：单文件处理时间通常在毫秒级</li>
+<li><strong>内存友好</strong>：逐行处理，避免大文件内存溢出</li>
+<li><strong>容错性强</strong>：单个文件出错不影响其他文件处理</li>
+<li><strong>日志详细</strong>：实时显示处理进度和结果预览</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/202511/9bdc13a3a36e/" rel="prev" title="AI大模型分析电影写微小说项目：字幕站自动下载工具">
+                  <i class="fa fa-angle-left"></i> AI大模型分析电影写微小说项目：字幕站自动下载工具
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/202511/eeae5e5cc27b/" rel="next" title="AI大模型分析电影写微小说项目：基于AI的影视内容深度解析">
+                  AI大模型分析电影写微小说项目：基于AI的影视内容深度解析 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">twoken</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

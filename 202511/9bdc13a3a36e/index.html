@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"let-ai.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.26.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3973904360441679"
+     crossorigin="anonymous"></script>
+
+    <meta name="description" content="这是一个用于自动化下载字幕网站字幕文件的Python爬虫工具。是一个知名的字幕分享网站，但手动下载大量字幕文件比较繁琐。这个工具可以自动批量下载字幕文件，支持日期页面和顺序页面两种URL格式，每个页面只下载第一个可用的字幕文件。 功能特点🚀 核心功能 自动登录：使用Cookie实现免验证码登录 批量下载：支持批量下载日期页面和顺序页面的字幕文件 智能解析：自动解析页面结构，定位下载链接 文件名处">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI大模型分析电影写微小说项目：字幕站自动下载工具">
+<meta property="og:url" content="http://let-ai.com/202511/9bdc13a3a36e/index.html">
+<meta property="og:site_name" content="AI微小说">
+<meta property="og:description" content="这是一个用于自动化下载字幕网站字幕文件的Python爬虫工具。是一个知名的字幕分享网站，但手动下载大量字幕文件比较繁琐。这个工具可以自动批量下载字幕文件，支持日期页面和顺序页面两种URL格式，每个页面只下载第一个可用的字幕文件。 功能特点🚀 核心功能 自动登录：使用Cookie实现免验证码登录 批量下载：支持批量下载日期页面和顺序页面的字幕文件 智能解析：自动解析页面结构，定位下载链接 文件名处">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-10-31T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-12-12T04:55:33.459Z">
+<meta property="article:author" content="twoken">
+<meta property="article:tag" content="openai,claude,modelscope,coze,微小说">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://let-ai.com/202511/9bdc13a3a36e/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://let-ai.com/202511/9bdc13a3a36e/","path":"202511/9bdc13a3a36e/","title":"AI大模型分析电影写微小说项目：字幕站自动下载工具"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>AI大模型分析电影写微小说项目：字幕站自动下载工具 | AI微小说</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WJ48W3LM1R"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-WJ48W3LM1R","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js" defer></script>
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">AI微小说</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">大模型写微小说</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD%E7%89%B9%E7%82%B9"><span class="nav-number">2.</span> <span class="nav-text">功能特点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%9A%80-%E6%A0%B8%E5%BF%83%E5%8A%9F%E8%83%BD"><span class="nav-number">2.1.</span> <span class="nav-text">🚀 核心功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%93%81-%E6%94%AF%E6%8C%81%E7%9A%84%E6%A0%BC%E5%BC%8F"><span class="nav-number">2.2.</span> <span class="nav-text">📁 支持的格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%94%A7-%E6%8A%80%E6%9C%AF%E7%89%B9%E6%80%A7"><span class="nav-number">2.3.</span> <span class="nav-text">🔧 技术特性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE"><span class="nav-number">3.</span> <span class="nav-text">安装与配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E8%A6%81%E6%B1%82"><span class="nav-number">3.1.</span> <span class="nav-text">环境要求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">3.2.</span> <span class="nav-text">配置文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">4.</span> <span class="nav-text">使用方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95"><span class="nav-number">4.1.</span> <span class="nav-text">基本用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%BF%90%E8%A1%8C"><span class="nav-number">4.2.</span> <span class="nav-text">命令行运行</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84"><span class="nav-number">5.</span> <span class="nav-text">项目结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E"><span class="nav-number">6.</span> <span class="nav-text">详细配置说明</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Cookie%E8%8E%B7%E5%8F%96%E6%96%B9%E6%B3%95"><span class="nav-number">6.1.</span> <span class="nav-text">Cookie获取方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A1%B5%E9%9D%A2URL%E6%A0%BC%E5%BC%8F"><span class="nav-number">6.2.</span> <span class="nav-text">页面URL格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E7%AD%96%E7%95%A5"><span class="nav-number">6.3.</span> <span class="nav-text">下载策略</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%AB%98%E7%BA%A7%E5%8A%9F%E8%83%BD"><span class="nav-number">7.</span> <span class="nav-text">高级功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%8B%E8%BD%BD%E8%8C%83%E5%9B%B4"><span class="nav-number">7.1.</span> <span class="nav-text">自定义下载范围</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86"><span class="nav-number">7.2.</span> <span class="nav-text">错误处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96"><span class="nav-number">7.3.</span> <span class="nav-text">性能优化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">8.</span> <span class="nav-text">注意事项</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%9A%A0%EF%B8%8F-%E4%BD%BF%E7%94%A8%E9%99%90%E5%88%B6"><span class="nav-number">8.1.</span> <span class="nav-text">⚠️ 使用限制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%94%92-%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4"><span class="nav-number">8.2.</span> <span class="nav-text">🔒 隐私保护</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4"><span class="nav-number">9.</span> <span class="nav-text">故障排除</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-number">9.1.</span> <span class="nav-text">常见问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B0%83%E8%AF%95%E6%96%B9%E6%B3%95"><span class="nav-number">9.2.</span> <span class="nav-text">调试方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%A9%E5%B1%95%E5%BC%80%E5%8F%91"><span class="nav-number">10.</span> <span class="nav-text">扩展开发</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E6%96%B0%E5%8A%9F%E8%83%BD"><span class="nav-number">10.1.</span> <span class="nav-text">添加新功能</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">twoken</p>
+  <div class="site-description" itemprop="description">项目简介：本项目将电影台词转化为AI文学创作的灵感源泉。系统通过三个核心模块：1. 字幕抓取与清洗 → 获得纯净文本；2. 台词分段与解析 → 理解电影语境 ；3. AI识别与创作 → 输出微小说。实现从影视语言到文学作品的智能转换。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/twoken404" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;twoken404" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/twoken" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;twoken" rel="noopener me" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.facebook.com/twoken" title="FB Page → https:&#x2F;&#x2F;www.facebook.com&#x2F;twoken" rel="noopener me" target="_blank"><i class="fab fa-facebook fa-fw"></i>FB Page</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://let-ai.com/202511/9bdc13a3a36e/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="twoken">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AI微小说">
+      <meta itemprop="description" content="项目简介：本项目将电影台词转化为AI文学创作的灵感源泉。系统通过三个核心模块：1. 字幕抓取与清洗 → 获得纯净文本；2. 台词分段与解析 → 理解电影语境 ；3. AI识别与创作 → 输出微小说。实现从影视语言到文学作品的智能转换。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="AI大模型分析电影写微小说项目：字幕站自动下载工具 | AI微小说">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          AI大模型分析电影写微小说项目：字幕站自动下载工具
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2025-11-01 00:00:00" itemprop="dateCreated datePublished" datetime="2025-11-01T00:00:00+08:00">2025-11-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2025-12-12 12:55:33" itemprop="dateModified" datetime="2025-12-12T12:55:33+08:00">2025-12-12</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id=""><a href="#" class="headerlink" title=""></a></h2><p>这是一个用于自动化下载字幕网站字幕文件的Python爬虫工具。是一个知名的字幕分享网站，但手动下载大量字幕文件比较繁琐。这个工具可以自动批量下载字幕文件，支持日期页面和顺序页面两种URL格式，每个页面只下载第一个可用的字幕文件。</p>
+<h2 id="功能特点"><a href="#功能特点" class="headerlink" title="功能特点"></a>功能特点</h2><h3 id="🚀-核心功能"><a href="#🚀-核心功能" class="headerlink" title="🚀 核心功能"></a>🚀 核心功能</h3><ul>
+<li><strong>自动登录</strong>：使用Cookie实现免验证码登录</li>
+<li><strong>批量下载</strong>：支持批量下载日期页面和顺序页面的字幕文件</li>
+<li><strong>智能解析</strong>：自动解析页面结构，定位下载链接</li>
+<li><strong>文件名处理</strong>：自动处理中文乱码，保持原始文件名</li>
+<li><strong>速率控制</strong>：可配置的下载间隔，减轻服务器负担</li>
+</ul>
+<h3 id="📁-支持的格式"><a href="#📁-支持的格式" class="headerlink" title="📁 支持的格式"></a>📁 支持的格式</h3><ul>
+<li>字幕文件：<code>.srt</code>, <code>.ass</code>, <code>.ssa</code>, <code>.sub</code></li>
+<li>压缩包：<code>.zip</code>, <code>.rar</code>, <code>.7z</code></li>
+</ul>
+<h3 id="🔧-技术特性"><a href="#🔧-技术特性" class="headerlink" title="🔧 技术特性"></a>🔧 技术特性</h3><ul>
+<li>使用Requests库进行HTTP请求</li>
+<li>使用BeautifulSoup解析HTML</li>
+<li>自动处理Cookie会话</li>
+<li>智能编码转换，解决中文乱码问题</li>
+<li>完善的错误处理和日志记录</li>
+</ul>
+<h2 id="安装与配置"><a href="#安装与配置" class="headerlink" title="安装与配置"></a>安装与配置</h2><h3 id="环境要求"><a href="#环境要求" class="headerlink" title="环境要求"></a>环境要求</h3><ul>
+<li>Python 3.6+</li>
+<li>依赖库：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install requests beautifulsoup4</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><ol>
+<li><p>在代码中设置Cookie：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cookie = <span class="string">&quot;PHPSESSID=your_session_id; zmk_home_view_subid=your_subid; security_session_verify=your_verify&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置下载参数：</p>
+<ul>
+<li>下载间隔：<code>self.delay = 5</code>（默认5秒）</li>
+<li>保存目录：<code>self.download_dir = &quot;download_srt&quot;</code></li>
+</ul>
+</li>
+</ol>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><h3 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建下载器实例</span></span><br><span class="line">downloader = SubtitleDownloader(cookie)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载日期页面字幕</span></span><br><span class="line">downloader.download_from_date_pages(start_year=<span class="number">2024</span>, start_month=<span class="number">3</span>, end_month=<span class="number">12</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载顺序页面字幕</span></span><br><span class="line">downloader.download_from_sequence_pages(start_id=<span class="number">151336</span>, end_id=<span class="number">151400</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="命令行运行"><a href="#命令行运行" class="headerlink" title="命令行运行"></a>命令行运行</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python spider_.py</span><br></pre></td></tr></table></figure>
+
+<h2 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">spider_.py</span><br><span class="line">├── SubtitleDownloader类</span><br><span class="line">│   ├── __init__()          # 初始化，设置Cookie和headers</span><br><span class="line">│   ├── decode_filename()   # 解码文件名，处理乱码</span><br><span class="line">│   ├── download_subtitle() # 下载单个字幕文件</span><br><span class="line">│   ├── parse_page()        # 解析页面获取下载链接</span><br><span class="line">│   ├── download_from_date_pages()   # 批量下载日期页面</span><br><span class="line">│   └── download_from_sequence_pages() # 批量下载顺序页面</span><br><span class="line">└── main()函数             # 程序入口</span><br></pre></td></tr></table></figure>
+
+<h2 id="详细配置说明"><a href="#详细配置说明" class="headerlink" title="详细配置说明"></a>详细配置说明</h2><h3 id="Cookie获取方法"><a href="#Cookie获取方法" class="headerlink" title="Cookie获取方法"></a>Cookie获取方法</h3><ol>
+<li>使用浏览器登录网站</li>
+<li>打开开发者工具（F12）</li>
+<li>在Application&#x2F;Cookies中查找相关Cookie</li>
+<li>复制完整的Cookie字符串</li>
+</ol>
+<h3 id="页面URL格式"><a href="#页面URL格式" class="headerlink" title="页面URL格式"></a>页面URL格式</h3><ol>
+<li><p><strong>日期页面</strong>：<code>https://.org/dld/202403.html</code></p>
+<ul>
+<li>格式：YYYYMM.html</li>
+<li>示例：202403表示2024年3月</li>
+</ul>
+</li>
+<li><p><strong>顺序页面</strong>：<code>https://.org/dld/151336.html</code></p>
+<ul>
+<li>格式：数字ID.html</li>
+<li>ID范围可自定义</li>
+</ul>
+</li>
+</ol>
+<h3 id="下载策略"><a href="#下载策略" class="headerlink" title="下载策略"></a>下载策略</h3><ul>
+<li>每个页面只下载第一个有效链接</li>
+<li>遇到”该字幕不可下载！”提示时跳过</li>
+<li>文件名重复时自动添加序号</li>
+<li>默认5秒下载间隔，避免被封禁</li>
+</ul>
+<h2 id="高级功能"><a href="#高级功能" class="headerlink" title="高级功能"></a>高级功能</h2><h3 id="自定义下载范围"><a href="#自定义下载范围" class="headerlink" title="自定义下载范围"></a>自定义下载范围</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 下载2024年全年的字幕</span></span><br><span class="line">downloader.download_from_date_pages(start_year=<span class="number">2024</span>, start_month=<span class="number">1</span>, end_month=<span class="number">12</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载大量顺序页面</span></span><br><span class="line">downloader.download_from_sequence_pages(start_id=<span class="number">150000</span>, end_id=<span class="number">160000</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="错误处理"><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h3><ul>
+<li>自动检测无效页面</li>
+<li>网络异常重试</li>
+<li>详细的错误日志输出</li>
+</ul>
+<h3 id="性能优化"><a href="#性能优化" class="headerlink" title="性能优化"></a>性能优化</h3><ul>
+<li>会话保持，减少登录开销</li>
+<li>流式下载，节省内存</li>
+<li>智能编码检测，提高兼容性</li>
+</ul>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><h3 id="⚠️-使用限制"><a href="#⚠️-使用限制" class="headerlink" title="⚠️ 使用限制"></a>⚠️ 使用限制</h3><ol>
+<li><strong>遵守robots.txt</strong>：请尊重网站的爬虫协议</li>
+<li><strong>合理使用</strong>：避免高频请求，建议保持5秒以上间隔</li>
+<li><strong>版权尊重</strong>：仅用于个人学习研究，请勿用于商业用途</li>
+<li><strong>账号安全</strong>：不要分享个人Cookie信息</li>
+</ol>
+<h3 id="🔒-隐私保护"><a href="#🔒-隐私保护" class="headerlink" title="🔒 隐私保护"></a>🔒 隐私保护</h3><ul>
+<li>Cookie信息本地存储，不上传任何服务器</li>
+<li>仅下载公开可访问的字幕文件</li>
+<li>不收集用户个人信息</li>
+</ul>
+<h2 id="故障排除"><a href="#故障排除" class="headerlink" title="故障排除"></a>故障排除</h2><h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h3><ol>
+<li><strong>下载失败</strong>：检查网络连接和Cookie有效性</li>
+<li><strong>文件名乱码</strong>：自动解码功能会处理大多数情况</li>
+<li><strong>找不到链接</strong>：确认页面结构是否变化，可能需要调整选择器</li>
+</ol>
+<h3 id="调试方法"><a href="#调试方法" class="headerlink" title="调试方法"></a>调试方法</h3><p>启用详细日志：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在parse_page()方法中添加调试信息</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;页面响应：<span class="subst">&#123;response.text[:<span class="number">500</span>]&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="扩展开发"><a href="#扩展开发" class="headerlink" title="扩展开发"></a>扩展开发</h2><h3 id="添加新功能"><a href="#添加新功能" class="headerlink" title="添加新功能"></a>添加新功能</h3><ol>
+<li><strong>代理支持</strong>：在session中配置代理</li>
+<li><strong>多线程下载</strong>：使用concurrent.futures模块</li>
+<li><strong>断点续传</strong>：记录已下载的文件ID</li>
+<li><strong>GUI界面</strong>：使用tkinter或PyQt5</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/202511/d66d812f3e87/" rel="next" title="AI大模型分析电影写微小说项目：字幕文件清理工具 - Subtitle Cleaner">
+                  AI大模型分析电影写微小说项目：字幕文件清理工具 - Subtitle Cleaner <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">twoken</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
