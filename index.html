@@ -397,7 +397,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2025-12-13 11:50:17 / Modified: 11:51:51" itemprop="dateCreated datePublished" datetime="2025-12-13T11:50:17+08:00">2025-12-13</time>
+      <time title="Created: 2025-12-13 11:50:17 / Modified: 12:26:53" itemprop="dateCreated datePublished" datetime="2025-12-13T11:50:17+08:00">2025-12-13</time>
     </span>
 
   
@@ -410,7 +410,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="概念坍缩：文生图模型中抽象概念的视觉符号固化现象研究"><a href="#概念坍缩：文生图模型中抽象概念的视觉符号固化现象研究" class="headerlink" title="概念坍缩：文生图模型中抽象概念的视觉符号固化现象研究"></a>概念坍缩：文生图模型中抽象概念的视觉符号固化现象研究</h1><h2 id="作者：twoken"><a href="#作者：twoken" class="headerlink" title="作者：twoken"></a>作者：twoken</h2><h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>本文系统研究了文生图（Text-to-Image）生成模型在处理“怀旧”、“记忆”、“过去”等抽象时间概念时出现的<strong>视觉符号固化现象</strong>。研究发现，当前主流扩散模型在面对这类抽象概念时，会过度依赖训练数据中的高频视觉关联（如钟表、老照片等），形成<strong>概念到符号的简化映射</strong>，并通过符号堆叠来模拟概念强度。这种“概念坍缩”现象揭示了模型在<strong>语义理解深度</strong>与<strong>视觉表达多样性</strong>之间的结构性矛盾。本文从数据偏差、注意力机制、损失函数三个维度分析其成因，并提出基于概念分解与风格引导的缓解策略。</p>
+          <hr>
+<h2 id="概念坍缩：文生图模型中抽象概念的视觉符号固化现象研究"><a href="#概念坍缩：文生图模型中抽象概念的视觉符号固化现象研究" class="headerlink" title="概念坍缩：文生图模型中抽象概念的视觉符号固化现象研究"></a>概念坍缩：文生图模型中抽象概念的视觉符号固化现象研究</h2><h2 id="作者：twoken"><a href="#作者：twoken" class="headerlink" title="作者：twoken"></a>作者：twoken</h2><h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>本文系统研究了文生图（Text-to-Image）生成模型在处理“怀旧”、“记忆”、“过去”等抽象时间概念时出现的<strong>视觉符号固化现象</strong>。研究发现，当前主流扩散模型在面对这类抽象概念时，会过度依赖训练数据中的高频视觉关联（如钟表、老照片等），形成<strong>概念到符号的简化映射</strong>，并通过符号堆叠来模拟概念强度。这种“概念坍缩”现象揭示了模型在<strong>语义理解深度</strong>与<strong>视觉表达多样性</strong>之间的结构性矛盾。本文从数据偏差、注意力机制、损失函数三个维度分析其成因，并提出基于概念分解与风格引导的缓解策略。</p>
 <p><strong>关键词</strong>：文生图；扩散模型；概念坍缩；视觉符号固化；抽象概念表示</p>
 <hr>
 <h3 id="1-引言"><a href="#1-引言" class="headerlink" title="1. 引言"></a>1. 引言</h3><p>文生图模型（如Gemini，Grok）的快速发展，实现了从文本描述到高质量图像的惊人跨越。然而，用户观察到一个普遍现象：当输入“怀旧”、“记忆”、“时光流逝”等抽象时间概念时，生成结果中<strong>钟表、老式怀表、挂钟等计时器出现的频率异常高</strong>，且模型感知的“情感强度”往往直接体现为<strong>钟表数量的增加</strong>而非意境的深化。</p>
