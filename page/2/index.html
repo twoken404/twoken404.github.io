@@ -138,7 +138,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -167,6 +167,107 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://let-ai.com/202512/f0b46a31393b/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="twoken">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AI微小说">
+      <meta itemprop="description" content="项目简介：本项目将电影台词转化为AI文学创作的灵感源泉。系统通过三个核心模块：1. 字幕抓取与清洗 → 获得纯净文本；2. 台词分段与解析 → 理解电影语境 ；3. AI识别与创作 → 输出微小说。实现从影视语言到文学作品的智能转换。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | AI微小说">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/202512/f0b46a31393b/" class="post-title-link" itemprop="url">Hexo Next 主题添加 Google Adsense 和 Google Analytics 方法</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2025-12-10 00:00:00" itemprop="dateCreated datePublished" datetime="2025-12-10T00:00:00+08:00">2025-12-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2025-12-11 13:38:12" itemprop="dateModified" datetime="2025-12-11T13:38:12+08:00">2025-12-11</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="项目背景"><a href="#项目背景" class="headerlink" title="项目背景"></a>项目背景</h2><p>最近启动了一个新项目：<strong>电影台词AI文学创作系统</strong>。<br>该系统旨在将电影台词转化为AI文学创作的灵感源泉，通过以下三个核心模块实现：</p>
+<ol>
+<li><strong>字幕抓取与清洗</strong> → 获得纯净文本；</li>
+<li><strong>台词分段与解析</strong> → 理解电影语境；</li>
+<li><strong>AI识别与创作</strong> → 输出微小说。</li>
+</ol>
+<p>最终实现从影视语言到文学作品的智能转换。</p>
+<p>项目内容逐渐丰富，便想到利用手头闲置的域名搭建展示页面，顺便记录一下 Hexo Next 主题添加 Google 服务的方法。</p>
+<hr>
+<h2 id="1-添加-Google-Analytics"><a href="#1-添加-Google-Analytics" class="headerlink" title="1. 添加 Google Analytics"></a>1. 添加 Google Analytics</h2><h4 id="环境信息"><a href="#环境信息" class="headerlink" title="环境信息"></a>环境信息</h4><ul>
+<li>Hexo 版本：8.1.1  </li>
+<li>主题：Next  </li>
+<li>部署方式：本地部署</li>
+</ul>
+<h4 id="配置步骤"><a href="#配置步骤" class="headerlink" title="配置步骤"></a>配置步骤</h4><ol>
+<li>将主题文件夹下的 <code>_config.yml</code> 复制到项目根目录，并重命名为 <code>_config.next.yml</code>。</li>
+<li>在 <code>_config.next.yml</code> 中找到以下配置段：</li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Google Analytics</span></span><br><span class="line"><span class="comment"># See: https://analytics.google.com</span></span><br><span class="line"><span class="attr">google_analytics:</span></span><br><span class="line">  <span class="attr">tracking_id:</span> <span class="string">G-WJ48W3LM1R</span></span><br><span class="line">  <span class="comment"># By default, NexT will load an external gtag.js script on your site.</span></span><br><span class="line">  <span class="comment"># If you only need the pageview feature, set the following option to true to get a better performance.</span></span><br></pre></td></tr></table></figure>
+<p>将 tracking_id 替换为你自己的 Google Analytics 测量 ID（如 G-XXXXXXXXXX）。</p>
+<p>无需手动插入 Google 提供的 JavaScript 代码，NexT 主题会自动加载 gtag.js。</p>
+<h2 id="2-添加-Google-Adsense"><a href="#2-添加-Google-Adsense" class="headerlink" title="2. 添加 Google Adsense"></a>2. 添加 Google Adsense</h2><h4 id="步骤一：放置-ads-txt"><a href="#步骤一：放置-ads-txt" class="headerlink" title="步骤一：放置 ads.txt"></a>步骤一：放置 ads.txt</h4><p>在 Hexo 项目根目录的 source 文件夹下，新建 ads.txt 文件，内容粘贴 Google Adsense 提供的验证信息。</p>
+<h4 id="步骤二：插入-Adsense-代码"><a href="#步骤二：插入-Adsense-代码" class="headerlink" title="步骤二：插入 Adsense 代码"></a>步骤二：插入 Adsense 代码</h4><p>打开主题布局文件：</p>
+<p>next&#x2F;layout&#x2F;_partials&#x2F;head&#x2F;head.njk</p>
+<p>在文件底部插入 Google Adsense 提供的 JavaScript 代码片段。</p>
+<h2 id="3-生成与部署"><a href="#3-生成与部署" class="headerlink" title="3. 生成与部署"></a>3. 生成与部署</h2><p>配置完成后，在项目根目录执行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
