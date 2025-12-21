@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"let-ai.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.26.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3973904360441679"
+     crossorigin="anonymous"></script>
+
+    <meta name="description" content="我遇到的“现代古装病”：一个AI文化理解偏差的实验观察在进行一项关于历史场景生成的实验时，我遇到了一个令人困惑的现象——无论我如何优化提示词，AI生成的所谓“中国古典场景”始终带有一种难以消除的“现代古装剧感”。这一发现促使我进行了一系列对比测试，并查阅了相关文献，试图理解这一问题的本质。 实验观察：优化提示词的局限在我的初始实验中，我尝试生成一个中国古典花园中的密谈场景，但生成的人物身着崭新戏服">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我遇到的“现代古装病”：一个AI文化理解偏差的实验观察">
+<meta property="og:url" content="http://let-ai.com/202512/15856d1ac63b/index.html">
+<meta property="og:site_name" content="AI微小说">
+<meta property="og:description" content="我遇到的“现代古装病”：一个AI文化理解偏差的实验观察在进行一项关于历史场景生成的实验时，我遇到了一个令人困惑的现象——无论我如何优化提示词，AI生成的所谓“中国古典场景”始终带有一种难以消除的“现代古装剧感”。这一发现促使我进行了一系列对比测试，并查阅了相关文献，试图理解这一问题的本质。 实验观察：优化提示词的局限在我的初始实验中，我尝试生成一个中国古典花园中的密谈场景，但生成的人物身着崭新戏服">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-12-21T03:06:54.702Z">
+<meta property="article:modified_time" content="2025-12-21T03:06:55.081Z">
+<meta property="article:author" content="twoken">
+<meta property="article:tag" content="openai,claude,modelscope,coze,微小说">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://let-ai.com/202512/15856d1ac63b/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://let-ai.com/202512/15856d1ac63b/","path":"202512/15856d1ac63b/","title":"我遇到的“现代古装病”：一个AI文化理解偏差的实验观察"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>我遇到的“现代古装病”：一个AI文化理解偏差的实验观察 | AI微小说</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WJ48W3LM1R"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-WJ48W3LM1R","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js" defer></script>
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">AI微小说</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">大模型写微小说</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%91%E9%81%87%E5%88%B0%E7%9A%84%E2%80%9C%E7%8E%B0%E4%BB%A3%E5%8F%A4%E8%A3%85%E7%97%85%E2%80%9D%EF%BC%9A%E4%B8%80%E4%B8%AAAI%E6%96%87%E5%8C%96%E7%90%86%E8%A7%A3%E5%81%8F%E5%B7%AE%E7%9A%84%E5%AE%9E%E9%AA%8C%E8%A7%82%E5%AF%9F"><span class="nav-number">1.</span> <span class="nav-text">我遇到的“现代古装病”：一个AI文化理解偏差的实验观察</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E8%A7%82%E5%AF%9F%EF%BC%9A%E4%BC%98%E5%8C%96%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%9A%84%E5%B1%80%E9%99%90"><span class="nav-number">1.1.</span> <span class="nav-text">实验观察：优化提示词的局限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E7%8C%AE%E6%A1%86%E6%9E%B6%E4%B8%8B%E7%9A%84%E5%88%86%E6%9E%90"><span class="nav-number">1.2.</span> <span class="nav-text">文献框架下的分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E7%9A%84%E6%9C%AC%E8%B4%A8%EF%BC%9A%E7%BC%BA%E5%A4%B1%E7%9A%84%E2%80%9C%E6%96%87%E5%8C%96%E8%AF%AD%E5%A2%83%E5%B1%82%E2%80%9D"><span class="nav-number">1.3.</span> <span class="nav-text">问题的本质：缺失的“文化语境层”</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%80%E5%90%8E"><span class="nav-number">1.4.</span> <span class="nav-text">最后</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">1.5.</span> <span class="nav-text">参考文献</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">twoken</p>
+  <div class="site-description" itemprop="description">项目简介：本项目将电影台词转化为AI文学创作的灵感源泉。系统通过三个核心模块：1. 字幕抓取与清洗 → 获得纯净文本；2. 台词分段与解析 → 理解电影语境 ；3. AI识别与创作 → 输出微小说。实现从影视语言到文学作品的智能转换。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/twoken404" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;twoken404" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/twoken" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;twoken" rel="noopener me" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.facebook.com/twoken" title="FB Page → https:&#x2F;&#x2F;www.facebook.com&#x2F;twoken" rel="noopener me" target="_blank"><i class="fab fa-facebook fa-fw"></i>FB Page</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://let-ai.com/202512/15856d1ac63b/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="twoken">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AI微小说">
+      <meta itemprop="description" content="项目简介：本项目将电影台词转化为AI文学创作的灵感源泉。系统通过三个核心模块：1. 字幕抓取与清洗 → 获得纯净文本；2. 台词分段与解析 → 理解电影语境 ；3. AI识别与创作 → 输出微小说。实现从影视语言到文学作品的智能转换。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="我遇到的“现代古装病”：一个AI文化理解偏差的实验观察 | AI微小说">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          我遇到的“现代古装病”：一个AI文化理解偏差的实验观察
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2025-12-21 11:06:54 / Modified: 11:06:55" itemprop="dateCreated datePublished" datetime="2025-12-21T11:06:54+08:00">2025-12-21</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="我遇到的“现代古装病”：一个AI文化理解偏差的实验观察"><a href="#我遇到的“现代古装病”：一个AI文化理解偏差的实验观察" class="headerlink" title="我遇到的“现代古装病”：一个AI文化理解偏差的实验观察"></a>我遇到的“现代古装病”：一个AI文化理解偏差的实验观察</h2><p>在进行一项关于历史场景生成的实验时，我遇到了一个令人困惑的现象——无论我如何优化提示词，AI生成的所谓“中国古典场景”始终带有一种难以消除的“现代古装剧感”。这一发现促使我进行了一系列对比测试，并查阅了相关文献，试图理解这一问题的本质。</p>
+<h3 id="实验观察：优化提示词的局限"><a href="#实验观察：优化提示词的局限" class="headerlink" title="实验观察：优化提示词的局限"></a>实验观察：优化提示词的局限</h3><p>在我的初始实验中，我尝试生成一个中国古典花园中的密谈场景，但生成的人物身着崭新戏服，妆容精致，光影效果酷似现代影视剧。我随即进行了专业化的提示词优化：指定了“明代或清代书生装”，要求“避免现代妆容”，引入“经典中国山水画风格”，强调“风化的纹理”和“自然光线”。然而，结果并未本质改观。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">第一次提示词：Under a canopy of blooming peach and plum trees, a heated secret meeting unfolds in a serene classical garden. A clever-looking man in scholarly attire leans casually against a carved stone pillar, holding a delicate fan. Facing him, a group of three women in elegant, sheer summer garments of pastel hues—azure, peach, and mint—stand attentively. Their dresses feature intricate embroidery and flutter lightly in the warm breeze. Dappled sunlight filters through the leaves, creating a dreamy, warm filter over the koi pond and arched bridge in the background. Stylized realism, vibrant yet soft, wide 16:9 frame.</span><br><span class="line"></span><br><span class="line">优化后提示词：A scene from a historical drama, captured in the style of a classic Chinese landscape painting blended with cinematic realism. Under a canopy of blooming peach and plum trees in a serene classical garden, a heated secret meeting unfolds. A clever-looking man in authentic Ming or Qing dynasty scholarly attire leans casually against a weathered, carved stone pillar. Facing him, three women in elegant, sheer summer garments of pastel hues (azure, peach, mint) stand with the poised restraint of classical figures. Their dresses, featuring intricate embroidery, flutter lightly. The atmosphere is thick with intrigue. Shot on 35mm film with a cinematic color grade, featuring warm, golden hour lighting with dappled sunlight filtering through leaves. The composition is wide 16:9, with a shallow depth of field focusing on the tense exchange, background elements like the koi pond and arched bridge rendered in soft, impressionistic brushstrokes. Avoid modern makeup, photorealistic sharpness, and studio lighting. Emphasize texture of fabrics, aged stone, and natural light.</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>有趣的是，当我尝试生成西方历史场景时——比如“18世纪法国沙龙中的哲学讨论”或“维多利亚时期的家庭聚会”——AI似乎能够生成相对更具历史沉浸感的图像。人物服饰的细节、室内陈设的风格，都显得更为“自然”，较少出现那种明显的“现代重演”感。这一对比差异引起了我的注意：为什么AI在理解非西方历史文化时，似乎存在一种特殊的“隔膜”？</p>
+<h3 id="文献框架下的分析"><a href="#文献框架下的分析" class="headerlink" title="文献框架下的分析"></a>文献框架下的分析</h3><p>查阅相关文献后，我发现这一问题并非个例，而是根植于当前文本到图像（TTI）模型的结构性局限之中。</p>
+<p><strong>1. 系统性文化偏差的量化证据</strong><br>《On the Cultural Gap in Text‑to‑Image Generation》（2023）提出的量化框架明确显示，主流扩散模型在生成非西方文化内容时，存在显著的质量和准确性差距。这种“文化鸿沟”在生成东亚历史内容时尤为明显。模型往往将“中国古典”简化为几个高度刻板化的视觉符号（如特定颜色、装饰图案），而无法捕捉其内在的多样性和历史演变。</p>
+<p><strong>2. “合成历史”与数据污染</strong><br>《Synthetic History: Evaluating Visual Representations of the Past in Diffusion Models》（2024）一文直接回应了我的困惑。研究发现，模型生成的“历史”图像，实际上是对<strong>已有视觉媒体中历史呈现方式的再合成</strong>，而非对历史本身的建模。由于互联网上关于中国历史的视觉资料，绝大部分是近几十年的影视剧、游戏和网红摄影，模型学到的是一部“被现代审美反复过滤后的合成历史”。这解释了为什么我的提示词优化无效——模型的知识库本身就被“影楼风”和“影视城美学”污染了。</p>
+<p><strong>3. 知识表征的结构性缺失</strong><br>《A Systematic Review of Cultural Bias in Text‑to‑Image (TTI) Models》（2025）的综述指出，当前模型缺乏对文化概念的<strong>结构化理解</strong>。例如，模型可能知道“汉服”这个词，但它无法将之与具体的朝代、社会阶层、礼仪场合相关联。当我要求“明代书生装”时，模型只是模糊地关联了“古装+文人”的常见视觉模式，而无法调用关于明代襴衫的具体形制、面料和穿着方式的知识。这与《Knowledge Graph based Analysis and Exploration of Historical Theatre Photographs》（2020）中倡导的基于知识图谱的结构化历史分析方法形成了鲜明对比——当前模型是“模式匹配”而非“知识推理”。</p>
+<p><strong>4. 为何西方场景“看似”更好？</strong><br>《Stable Bias: Evaluating Societal Representations in Diffusion Models》（2023）和《Deconstructing Bias》（2023）提供了线索。西方历史与美学体系（尤其是文艺复兴以来的艺术传统）在模型训练数据中占据了<strong>中心地位</strong>且<strong>相对统一</strong>。模型学习了从古典油画到历史电影的一整套相对连贯的视觉语言。当用户（尤其是西方用户）请求“维多利亚时代”场景时，用户的预期与模型从西方艺术史数据中学到的表征之间，重合度较高。然而，这并不意味着模型真正理解了西方历史，只是其训练数据的分布使得输出更符合某种常见的“视觉惯例”。</p>
+<p>相比之下，对于中国历史，模型面临三重困境：</p>
+<ul>
+<li><strong>数据源的现代性污染</strong>：高质量、严肃的中国古代视觉资料（如古画、文物图谱）在训练数据中占比极低。</li>
+<li><strong>用户预期的多样性</strong>：不同用户对“中国古典”的想象可能源于截然不同的来源（正史剧、仙侠剧、日本动漫、西方东方主义绘画），导致提示词与模型内部表征的匹配更加混乱。</li>
+<li><strong>文化转译的损耗</strong>：即使使用英文提示词，如“scholarly attire”（书生装），模型也需要经过“英文词汇→抽象概念→视觉模式”的多层映射，每一步都可能引入基于训练数据偏差的扭曲。</li>
+</ul>
+<h3 id="问题的本质：缺失的“文化语境层”"><a href="#问题的本质：缺失的“文化语境层”" class="headerlink" title="问题的本质：缺失的“文化语境层”"></a>问题的本质：缺失的“文化语境层”</h3><p>综合我的实验与文献分析，笔者认为，核心问题在于当前模型缺乏一个<strong>可被灵活调用的“文化-历史语境层”</strong>。</p>
+<p>模型像一个拥有海量剧照的“剧照师”，但它没有“历史顾问”。它能拼贴出看起来“古风”的元素，但无法理解这些元素背后的社会规则、生活逻辑和美学精神。当我说“密谈”时，它想到的是戏剧性的镜头语言；当我说“轻薄夏装”时，它呈现的是现代纱裙的质感而非古典纱罗的垂坠。它生成的，始终是<strong>关于历史的现代视觉评论</strong>，而非试图接近历史本身的视觉假设。</p>
+<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p>我的实验观察与文献研究共同指向一个结论：当前文生图模型在处理深层次、非西方的历史文化概念时，面临的根本挑战是<strong>表征鸿沟</strong>。仅仅优化提示词，是在模型的“症状层”进行调整，无法触及其在“知识层”和“语境层”的缺陷。</p>
+<p>未来的改进方向，或许不在于追求更大的通用模型，而在于：</p>
+<ol>
+<li><strong>发展专业化的文化计算模型</strong>：针对特定历史文化领域，构建融合了结构化知识（如历史图谱、服饰制度）的微调模型或插件。</li>
+<li><strong>革新数据构建范式</strong>：主动纳入更多元、高质量的本土历史视觉资料与学术研究成果，平衡数据分布。</li>
+<li><strong>探索新的交互范式</strong>：允许用户与模型就历史背景、人物关系进行“多轮对话式共建”，逐步构建语境，而非一次性输出定型图像。</li>
+</ol>
+<p>只有当模型学会在生成图像时，不仅考虑“看起来像什么”，更能思考“在何种历史情境下可能是什么”，我们才有可能跨越这道“现代古装”的滤镜，瞥见更为真切的历史光影。这不仅是技术挑战，更是一场关于如何让AI理解人类文明复杂性的深刻探索。</p>
+<h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><ol>
+<li>Synthetic History: Evaluating Visual Representations of the Past in Diffusion Models – 2024</li>
+<li>A Systematic Review of Cultural Bias in Text‑to‑Image (TTI) Models – 2025</li>
+<li>On the Cultural Gap in Text‑to‑Image Generation – 2023</li>
+<li>Deconstructing Bias: A Multifaceted Framework for Diagnosing Cultural and Compositional Inequities in Text‑to‑Image Generative Models – 2023</li>
+<li>Stable Bias: Evaluating Societal Representations in Diffusion Models – 2023</li>
+<li>AI文生图模型测评：从基础美学到文化理解的多维度分析 – 2025</li>
+<li>AI图像生成技术的蓬勃发展与语料、语境的作用 – 2025, 微信公众号文章</li>
+<li>Knowledge Graph based Analysis and Exploration of Historical Theatre Photographs – 2020</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/202512/d94ab80aae7d/" rel="prev" title="微小说：剑的温度">
+                  <i class="fa fa-angle-left"></i> 微小说：剑的温度
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/202512/be5faec79c4f/" rel="next" title="My Encounter with the &quot;Modern Period Drama Syndrome&quot;： An Experimental Observation of AI&#39;s Cultural Understanding Gap">
+                  My Encounter with the "Modern Period Drama Syndrome"： An Experimental Observation of AI's Cultural Understanding Gap <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">twoken</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
