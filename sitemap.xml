@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://let-ai.com/202512/c5038a3743a3/</loc>
+    
+    <lastmod>2025-12-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://let-ai.com/202512/b822d2483ba3/</loc>
     
     <lastmod>2025-12-24</lastmod>
@@ -265,7 +274,7 @@
 
   <url>
     <loc>http://let-ai.com/</loc>
-    <lastmod>2025-12-24</lastmod>
+    <lastmod>2025-12-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
