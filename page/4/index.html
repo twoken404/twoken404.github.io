@@ -144,12 +144,12 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">43</span>
+          <span class="site-state-item-count">44</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
@@ -183,6 +183,78 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://let-ai.com/202512/ee3de104bb82/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="twoken">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AI微小说">
+      <meta itemprop="description" content="项目简介：本项目将电影台词转化为AI文学创作的灵感源泉。系统通过三个核心模块：1. 字幕抓取与清洗 → 获得纯净文本；2. 台词分段与解析 → 理解电影语境 ；3. AI识别与创作 → 输出微小说。实现从影视语言到文学作品的智能转换。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | AI微小说">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/202512/ee3de104bb82/" class="post-title-link" itemprop="url">微小说：雪与面具的边界</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2025-12-15 08:58:06 / Modified: 08:59:16" itemprop="dateCreated datePublished" datetime="2025-12-15T08:58:06+08:00">2025-12-15</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>雪落下时，尼古拉总想起那个意大利人说，健康的人需要医生，而有病的人不需要。他在边境小镇看守一座废弃钟楼，钟声三十年未响。旅客们常来问路，捧着褪色地图寻找不存在的宝藏。尼古拉会指相反方向，看他们兴冲冲走向更深的雪原——他相信迷路比抵达更有意义。</p>
+<p>安娜出现那天，没有地图，只带了一箱空相框。她说要收集“冻结的笑声”。尼古拉提醒她熊群危险，她却笑答熊是灵魂的镜子。他们并肩坐在钟楼台阶上，她将相框对准飘雪：“沉默有时比誓言更响亮。”午夜，尼古拉终于敲响铜钟，震落的积雪掩埋了旧路径。安娜留下一个装满雪花的相框，背面写着：“陌生人不过是尚未揭开故事的朋友。</p>
+<p>”雪停后，尼古拉发现钟楼指针开始倒转。他不再指引旅客，转而讲述一个关于面具的故事：有人终其一生佩戴面具，最后连面具下的脸也成了新的面具。当探险者的脚印被新雪覆盖，他听见风中有轻柔的回响，像某种遥远的、不会冻结的货币在流动。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1094,168 +1166,6 @@
 <p>编译后，在&#x2F;home&#x2F;zk&#x2F;ai&#x2F;llama.cpp&#x2F;build&#x2F;bin下要有llama-quantize和llama-cli这两个主要文件。</p>
 <h2 id="2-微调"><a href="#2-微调" class="headerlink" title="2.微调"></a>2.微调</h2><h5 id="2-1微调主代码"><a href="#2-1微调主代码" class="headerlink" title="2.1微调主代码"></a>2.1微调主代码</h5><p>这里把基础模型和数据集都改写成本地调用</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> unsloth <span class="keyword">import</span> FastLanguageModel</span><br><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">from</span> trl <span class="keyword">import</span> SFTTrainer</span><br><span class="line"><span class="keyword">from</span> transformers <span class="keyword">import</span> TrainingArguments</span><br><span class="line"><span class="keyword">from</span> datasets <span class="keyword">import</span> load_dataset</span><br><span class="line"></span><br><span class="line"><span class="comment"># 加载模型</span></span><br><span class="line">max_seq_length = <span class="number">2048</span></span><br><span class="line">dtype = <span class="literal">None</span></span><br><span class="line">load_in_4bit = <span class="literal">True</span></span><br><span class="line">model, tokenizer = FastLanguageModel.from_pretrained(</span><br><span class="line">    model_name = <span class="string">&quot;/home/zk/ai/base_model/llama-3-8b-bnb-4bit&quot;</span>,</span><br><span class="line">    max_seq_length = max_seq_length,</span><br><span class="line">    dtype = dtype,</span><br><span class="line">    load_in_4bit = load_in_4bit,</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 准备训练数据</span></span><br><span class="line">alpaca_prompt = <span class="string">&quot;&quot;&quot;Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.</span></span><br><span class="line"><span class="string">### Instruction：</span></span><br><span class="line"><span class="string">&#123;&#125;</span></span><br><span class="line"><span class="string">### Input:</span></span><br><span class="line"><span class="string">&#123;&#125;</span></span><br><span class="line"><span class="string">### Response:</span></span><br><span class="line"><span class="string">&#123;&#125;&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">EOS_TOKEN = tokenizer.eos_token  <span class="comment"># 必须添加 EOS_TOKEN</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">formatting_prompts_func</span>(<span class="params">examples</span>):</span><br><span class="line">    instructions = examples[<span class="string">&quot;instruction&quot;</span>]</span><br><span class="line">    inputs = examples[<span class="string">&quot;input&quot;</span>]</span><br><span class="line">    outputs = examples[<span class="string">&quot;output&quot;</span>]</span><br><span class="line">    texts = []</span><br><span class="line">    <span class="keyword">for</span> instruction, <span class="built_in">input</span>, output <span class="keyword">in</span> <span class="built_in">zip</span>(instructions, inputs, outputs):</span><br><span class="line">        <span class="comment"># 必须添加EOS_TOKEN，否则无限生成</span></span><br><span class="line">        text = alpaca_prompt.<span class="built_in">format</span>(instruction, <span class="built_in">input</span>, output) + EOS_TOKEN</span><br><span class="line">        texts.append(text)</span><br><span class="line">    <span class="keyword">return</span> &#123;<span class="string">&quot;text&quot;</span>: texts&#125;</span><br><span class="line"><span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 本地数据集</span></span><br><span class="line">dataset = load_dataset(<span class="string">&quot;json&quot;</span>, data_files = <span class="string">&quot;/home/zk/ai/dataset/caishui_2011_100hao.json&quot;</span>, split=<span class="string">&quot;train&quot;</span>)</span><br><span class="line">dataset = dataset.<span class="built_in">map</span>(formatting_prompts_func, batched = <span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置训练参数</span></span><br><span class="line">model = FastLanguageModel.get_peft_model(</span><br><span class="line">    model,</span><br><span class="line">    r = <span class="number">16</span>,</span><br><span class="line">    target_modules = [<span class="string">&quot;q_proj&quot;</span>, <span class="string">&quot;k_proj&quot;</span>, <span class="string">&quot;v_proj&quot;</span>, <span class="string">&quot;o_proj&quot;</span>,</span><br><span class="line">                        <span class="string">&quot;gate_proj&quot;</span>, <span class="string">&quot;up_proj&quot;</span>, <span class="string">&quot;down_proj&quot;</span>, ],</span><br><span class="line">    lora_alpha = <span class="number">16</span>,</span><br><span class="line">    lora_dropout = <span class="number">0</span>,</span><br><span class="line">    bias = <span class="string">&quot;none&quot;</span>,</span><br><span class="line">    use_gradient_checkpointing = <span class="literal">True</span>,</span><br><span class="line">    random_state = <span class="number">3407</span>,</span><br><span class="line">    max_seq_length = max_seq_length,</span><br><span class="line">    use_rslora = <span class="literal">False</span>,</span><br><span class="line">    loftq_config = <span class="literal">None</span>,</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">trainer = SFTTrainer(</span><br><span class="line">    model = model,</span><br><span class="line">    train_dataset = dataset,</span><br><span class="line">    dataset_text_field = <span class="string">&quot;text&quot;</span>,</span><br><span class="line">    max_seq_length = max_seq_length,</span><br><span class="line">    tokenizer = tokenizer,</span><br><span class="line">    args = TrainingArguments(</span><br><span class="line">        per_device_train_batch_size = <span class="number">1</span>,</span><br><span class="line">        gradient_accumulation_steps = <span class="number">4</span>,</span><br><span class="line">        warmup_steps = <span class="number">2</span>,</span><br><span class="line">        max_steps = <span class="number">20</span>,</span><br><span class="line">        fp16 = <span class="keyword">not</span> torch.cuda.is_bf16_supported(),</span><br><span class="line">        bf16 = torch.cuda.is_bf16_supported(),</span><br><span class="line">        logging_steps = <span class="number">1</span>,</span><br><span class="line">        output_dir = <span class="string">&quot;outputs&quot;</span>,</span><br><span class="line">        optim = <span class="string">&quot;adamw_8bit&quot;</span>,</span><br><span class="line">        weight_decay = <span class="number">0.01</span>,</span><br><span class="line">        lr_scheduler_type = <span class="string">&quot;linear&quot;</span>,</span><br><span class="line">        seed = <span class="number">3407</span>,</span><br><span class="line">        learning_rate = <span class="number">2e-5</span>,</span><br><span class="line">    ),</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 开始训练</span></span><br><span class="line">trainer.train()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 保存微调模型</span></span><br><span class="line">model.save_pretrained(<span class="string">&quot;lora_model&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 选项：保存为16位hf模型</span></span><br><span class="line">save_16bit = <span class="built_in">input</span>(<span class="string">&quot;是否保存为16位hf模型？(y/n): &quot;</span>)</span><br><span class="line"><span class="keyword">if</span> save_16bit.lower() == <span class="string">&quot;y&quot;</span>:</span><br><span class="line">    model.save_pretrained_merged(<span class="string">&quot;outputs&quot;</span>, tokenizer, save_method=<span class="string">&quot;merged_16bit&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 选项：保存为gguf模型</span></span><br><span class="line">save_gguf = <span class="built_in">input</span>(<span class="string">&quot;是否保存为gguf模型？(y/n): &quot;</span>)</span><br><span class="line"><span class="keyword">if</span> save_gguf.lower() == <span class="string">&quot;y&quot;</span>:</span><br><span class="line">    os.system(<span class="string">&quot;python /home/zk/ai/llama.cpp/convert_hf_to_gguf.py --outfile /home/zk/ai/gguf_model/lm38b_tax_jzjt.gguf /home/zk/ai/outputs&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 选项：量化为4位gguf模型</span></span><br><span class="line">quantize_4bit = <span class="built_in">input</span>(<span class="string">&quot;是否量化为4位gguf模型？(y/n): &quot;</span>)</span><br><span class="line"><span class="keyword">if</span> quantize_4bit.lower() == <span class="string">&quot;y&quot;</span>:</span><br><span class="line">    os.system(<span class="string">&quot;/home/zk/ai/llama.cpp/build/bin/llama-quantize /home/zk/ai/gguf_model/QWQ_tax_jzjt.gguf /home/zk/ai/gguf_model/lm38b_tax_jzjt-Q4_K_M.gguf Q4_K_M&quot;</span>)</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://let-ai.com/202511/eeae5e5cc27b/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="twoken">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="AI微小说">
-      <meta itemprop="description" content="项目简介：本项目将电影台词转化为AI文学创作的灵感源泉。系统通过三个核心模块：1. 字幕抓取与清洗 → 获得纯净文本；2. 台词分段与解析 → 理解电影语境 ；3. AI识别与创作 → 输出微小说。实现从影视语言到文学作品的智能转换。">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | AI微小说">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/202511/eeae5e5cc27b/" class="post-title-link" itemprop="url">AI大模型分析电影写微小说项目：基于AI的影视内容深度解析</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2025-11-03 00:00:00" itemprop="dateCreated datePublished" datetime="2025-11-03T00:00:00+08:00">2025-11-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-12-12 13:05:08" itemprop="dateModified" datetime="2025-12-12T13:05:08+08:00">2025-12-12</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="电影台词智能分析工具：基于AI的影视内容深度解析"><a href="#电影台词智能分析工具：基于AI的影视内容深度解析" class="headerlink" title="电影台词智能分析工具：基于AI的影视内容深度解析"></a>电影台词智能分析工具：基于AI的影视内容深度解析</h1><h2 id="🎬-项目简介"><a href="#🎬-项目简介" class="headerlink" title="🎬 项目简介"></a>🎬 项目简介</h2><p>这是一个利用人工智能技术自动分析电影台词内容的智能工具。通过简单的文本输入，程序能够：</p>
-<ul>
-<li><strong>自动识别电影名称</strong>：从台词内容或文件名智能推断</li>
-<li><strong>提炼经典台词</strong>：筛选最具代表性的10句精彩对白</li>
-<li><strong>创作微小说</strong>：基于电影主题创作现代化改编故事</li>
-<li><strong>支持长文本处理</strong>：智能分段处理超长电影台词</li>
-</ul>
-<h2 id="✨-核心功能"><a href="#✨-核心功能" class="headerlink" title="✨ 核心功能"></a>✨ 核心功能</h2><h3 id="🔍-智能电影分析"><a href="#🔍-智能电影分析" class="headerlink" title="🔍 智能电影分析"></a>🔍 智能电影分析</h3><ul>
-<li>自动推断电影名称和基本信息</li>
-<li>深度理解剧情脉络和人物关系</li>
-<li>提取最具代表性的经典台词</li>
-</ul>
-<h3 id="📝-创意内容生成"><a href="#📝-创意内容生成" class="headerlink" title="📝 创意内容生成"></a>📝 创意内容生成</h3><ul>
-<li>基于电影主题创作全新微小说</li>
-<li>现代背景下的故事改编</li>
-<li>保持原作风味的同时创新叙事</li>
-</ul>
-<h3 id="⚡-技术优势"><a href="#⚡-技术优势" class="headerlink" title="⚡ 技术优势"></a>⚡ 技术优势</h3><ul>
-<li><strong>流式处理</strong>：支持超长台词分段分析</li>
-<li><strong>多模型支持</strong>：兼容DeepSeek、通义千问等主流模型</li>
-<li><strong>智能记忆</strong>：完整接收台词后再统一分析</li>
-</ul>
-<h2 id="🛠️-技术架构"><a href="#🛠️-技术架构" class="headerlink" title="🛠️ 技术架构"></a>🛠️ 技术架构</h2><h3 id="核心技术"><a href="#核心技术" class="headerlink" title="核心技术"></a>核心技术</h3><ul>
-<li><strong>AI模型</strong>：DeepSeek-R1推理模型（支持思维链）</li>
-<li><strong>API接口</strong>：硅基流动平台（OpenAI兼容）</li>
-<li><strong>处理引擎</strong>：Python + OpenAI SDK</li>
-</ul>
-<h2 id="💡-代码解析"><a href="#💡-代码解析" class="headerlink" title="💡 代码解析"></a>💡 代码解析</h2><h3 id="1-智能分段处理长文本"><a href="#1-智能分段处理长文本" class="headerlink" title="1. 智能分段处理长文本"></a>1. 智能分段处理长文本</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">split_text_into_parts</span>(<span class="params">text_content, part_length=<span class="number">3000</span></span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;智能文本分段，避免截断完整句子&quot;&quot;&quot;</span></span><br><span class="line">    parts = []</span><br><span class="line">    sentences = re.split(<span class="string">r&#x27;(?&lt;=[。！？!?])&#x27;</span>, text_content)</span><br><span class="line">    </span><br><span class="line">    current_part = <span class="string">&quot;&quot;</span></span><br><span class="line">    <span class="keyword">for</span> sentence <span class="keyword">in</span> sentences:</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(current_part) + <span class="built_in">len</span>(sentence) &lt;= part_length:</span><br><span class="line">            current_part += sentence</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">if</span> current_part:</span><br><span class="line">                parts.append(current_part)</span><br><span class="line">            current_part = sentence</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> current_part:</span><br><span class="line">        parts.append(current_part)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> parts</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-电影名称提取"><a href="#2-电影名称提取" class="headerlink" title="2. 电影名称提取"></a>2. 电影名称提取</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">extract_movie_name</span>(<span class="params">file_path</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;从复杂文件名中智能提取电影名称&quot;&quot;&quot;</span></span><br><span class="line">    filename = Path(file_path).stem</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 移除下载站点标记</span></span><br><span class="line">    clean_name = re.sub(<span class="string">r&#x27;^\[.*?\]&#x27;</span>, <span class="string">&#x27;&#x27;</span>, filename)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 移除分辨率、编码等信息</span></span><br><span class="line">    patterns_to_remove = [</span><br><span class="line">        <span class="string">r&#x27;\d&#123;4&#125;p&#x27;</span>,  <span class="comment"># 1080p, 720p等</span></span><br><span class="line">        <span class="string">r&#x27;BluRay&#x27;</span>, <span class="string">&#x27;DVD&#x27;</span>, <span class="string">&#x27;WEB-DL&#x27;</span>,</span><br><span class="line">        <span class="string">r&#x27;x\d&#123;3&#125;&#x27;</span>, <span class="string">&#x27;H\.?264&#x27;</span>, <span class="string">&#x27;HEVC&#x27;</span>,</span><br><span class="line">        <span class="string">r&#x27;\d&#123;4&#125;\.\d&#123;2&#125;\.\d&#123;2&#125;&#x27;</span>,  <span class="comment"># 日期</span></span><br><span class="line">        <span class="string">r&#x27;[A-Z][A-Za-z]+-?Team&#x27;</span>,  <span class="comment"># 发布组</span></span><br><span class="line">    ]</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> pattern <span class="keyword">in</span> patterns_to_remove:</span><br><span class="line">        clean_name = re.sub(pattern, <span class="string">&#x27;&#x27;</span>, clean_name, flags=re.IGNORECASE)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 清理多余字符</span></span><br><span class="line">    clean_name = re.sub(<span class="string">r&#x27;[_-]+&#x27;</span>, <span class="string">&#x27; &#x27;</span>, clean_name)</span><br><span class="line">    clean_name = re.sub(<span class="string">r&#x27;\s+&#x27;</span>, <span class="string">&#x27; &#x27;</span>, clean_name).strip()</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> clean_name</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-上下文记忆管理"><a href="#3-上下文记忆管理" class="headerlink" title="3. 上下文记忆管理"></a>3. 上下文记忆管理</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ConversationManager</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;管理多轮对话上下文&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, max_context_tokens=<span class="number">4000</span></span>):</span><br><span class="line">        <span class="variable language_">self</span>.history = []</span><br><span class="line">        <span class="variable language_">self</span>.max_tokens = max_context_tokens</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">add_message</span>(<span class="params">self, role, content</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;添加消息并维护上下文长度&quot;&quot;&quot;</span></span><br><span class="line">        <span class="variable language_">self</span>.history.append(&#123;<span class="string">&quot;role&quot;</span>: role, <span class="string">&quot;content&quot;</span>: content&#125;)</span><br><span class="line">        <span class="variable language_">self</span>._trim_history()</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">_trim_history</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;智能修剪历史记录，保留最重要的对话&quot;&quot;&quot;</span></span><br><span class="line">        total_tokens = <span class="built_in">sum</span>(<span class="built_in">len</span>(msg[<span class="string">&quot;content&quot;</span>]) <span class="keyword">for</span> msg <span class="keyword">in</span> <span class="variable language_">self</span>.history)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> total_tokens &gt; <span class="variable language_">self</span>.max_tokens <span class="keyword">and</span> <span class="built_in">len</span>(<span class="variable language_">self</span>.history) &gt; <span class="number">2</span>:</span><br><span class="line">            <span class="comment"># 移除最旧的非系统消息</span></span><br><span class="line">            <span class="keyword">for</span> i, msg <span class="keyword">in</span> <span class="built_in">enumerate</span>(<span class="variable language_">self</span>.history):</span><br><span class="line">                <span class="keyword">if</span> msg[<span class="string">&quot;role&quot;</span>] != <span class="string">&quot;system&quot;</span>:</span><br><span class="line">                    removed = <span class="variable language_">self</span>.history.pop(i)</span><br><span class="line">                    total_tokens -= <span class="built_in">len</span>(removed[<span class="string">&quot;content&quot;</span>])</span><br><span class="line">                    <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="🎯-Prompt工程"><a href="#🎯-Prompt工程" class="headerlink" title="🎯 Prompt工程"></a>🎯 Prompt工程</h2><h3 id="1-分段发送策略"><a href="#1-分段发送策略" class="headerlink" title="1. 分段发送策略"></a>1. 分段发送策略</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 第一阶段：告知模型准备接收长内容</span></span><br><span class="line">initial_prompt = <span class="string">f&quot;&quot;&quot;我将分<span class="subst">&#123;parts_count&#125;</span>次发送电影《<span class="subst">&#123;movie_name&#125;</span>》的完整台词给你。</span></span><br><span class="line"><span class="string">请你先接收所有台词内容，不要立即分析。</span></span><br><span class="line"><span class="string">等我发送完所有部分后，我会让你开始分析。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">这是第1部分，共<span class="subst">&#123;parts_count&#125;</span>部分：</span></span><br><span class="line"><span class="string"><span class="subst">&#123;first_part&#125;</span></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">请回复&quot;收到第1部分，等待后续内容。&quot;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-格式约束技巧"><a href="#2-格式约束技巧" class="headerlink" title="2. 格式约束技巧"></a>2. 格式约束技巧</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">analysis_prompt = <span class="string">f&quot;&quot;&quot;请根据所有台词内容完成以下分析，严格按照要求的格式输出：</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">电影名称：<span class="subst">&#123;movie_name&#125;</span></span></span><br><span class="line"><span class="string">经典台词：</span></span><br><span class="line"><span class="string">1. [第一句经典台词]</span></span><br><span class="line"><span class="string">2. [第二句经典台词]</span></span><br><span class="line"><span class="string">...（必须输出10句）</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">微小说：[根据台词创作的300字微小说。]</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">要求（重要指令）：</span></span><br><span class="line"><span class="string">1. 根据你所知道的给出该电影超级简单的介绍</span></span><br><span class="line"><span class="string">2. 经典台词要选择最具代表性、最打动人心的10句</span></span><br><span class="line"><span class="string">3. 微小说要基于所有台词的意境和主题创作，保持故事完整性</span></span><br><span class="line"><span class="string">4. 注意：不要和原电影叙事年代相同，尽量用现在的年代</span></span><br><span class="line"><span class="string">5. 记得为微小说写题目</span></span><br><span class="line"><span class="string">6. 禁止：不要输出任何评价性内容，只输出要求的格式内容</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">严格按照上述格式，不要添加额外说明！&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="3-角色设定增强效果"><a href="#3-角色设定增强效果" class="headerlink" title="3. 角色设定增强效果"></a>3. 角色设定增强效果</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">system_prompt = <span class="string">&quot;&quot;&quot;你是一位资深的电影评论家和小说作家，具有以下特点：</span></span><br><span class="line"><span class="string">1. 对电影艺术有深刻理解，能准确把握电影主题</span></span><br><span class="line"><span class="string">2. 擅长从台词中提炼精华，识别经典对白</span></span><br><span class="line"><span class="string">3. 具有出色的改编能力，能将经典故事现代化</span></span><br><span class="line"><span class="string">4. 严格遵守格式要求，输出结构清晰</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">你的任务是根据提供的电影台词，完成专业分析。&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="4-分阶段处理长文本"><a href="#4-分阶段处理长文本" class="headerlink" title="4. 分阶段处理长文本"></a>4. 分阶段处理长文本</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">create_staged_prompts</span>(<span class="params">movie_name, parts</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;创建分阶段的prompt序列&quot;&quot;&quot;</span></span><br><span class="line">    prompts = []</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 阶段1：建立上下文</span></span><br><span class="line">    prompts.append(&#123;</span><br><span class="line">        <span class="string">&quot;role&quot;</span>: <span class="string">&quot;system&quot;</span>,</span><br><span class="line">        <span class="string">&quot;content&quot;</span>: <span class="string">f&quot;你将接收电影《<span class="subst">&#123;movie_name&#125;</span>》的完整台词，请先专心接收，不要分析。&quot;</span></span><br><span class="line">    &#125;)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 阶段2：分段发送内容</span></span><br><span class="line">    <span class="keyword">for</span> i, part <span class="keyword">in</span> <span class="built_in">enumerate</span>(parts, <span class="number">1</span>):</span><br><span class="line">        <span class="keyword">if</span> i == <span class="number">1</span>:</span><br><span class="line">            content = <span class="string">f&quot;开始发送《<span class="subst">&#123;movie_name&#125;</span>》台词，这是第<span class="subst">&#123;i&#125;</span>部分：\n\n<span class="subst">&#123;part&#125;</span>\n\n请确认收到。&quot;</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            content = <span class="string">f&quot;继续发送《<span class="subst">&#123;movie_name&#125;</span>》台词，第<span class="subst">&#123;i&#125;</span>部分：\n\n<span class="subst">&#123;part&#125;</span>\n\n请确认收到。&quot;</span></span><br><span class="line">        prompts.append(&#123;<span class="string">&quot;role&quot;</span>: <span class="string">&quot;user&quot;</span>, <span class="string">&quot;content&quot;</span>: content&#125;)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 阶段3：分析指令</span></span><br><span class="line">    prompts.append(&#123;</span><br><span class="line">        <span class="string">&quot;role&quot;</span>: <span class="string">&quot;user&quot;</span>, </span><br><span class="line">        <span class="string">&quot;content&quot;</span>: <span class="string">&quot;&quot;&quot;现在你已经接收了完整台词，请开始分析。注意以下关键要求：</span></span><br><span class="line"><span class="string">        1. 输出10句经典台词，必须编号1-10</span></span><br><span class="line"><span class="string">        2. 微小说要现代背景，300字左右</span></span><br><span class="line"><span class="string">        3. 不要评价，只输出结果&quot;&quot;&quot;</span></span><br><span class="line">    &#125;)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> prompts</span><br></pre></td></tr></table></figure>
-
-<h2 id="📋-使用示例"><a href="#📋-使用示例" class="headerlink" title="📋 使用示例"></a>📋 使用示例</h2><p>输入电影台词文件（如《倩女幽魂2》台词）：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">宁采臣：这里阴气太重，我们快走吧。</span><br><span class="line">聂小倩：公子，你可知道前世今生？</span><br></pre></td></tr></table></figure>
-
-<p>输出分析结果：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">电影名称：倩女幽魂2</span><br><span class="line">经典台词：</span><br><span class="line">1. &quot;人间道，鬼道，各有各的轮回&quot;</span><br><span class="line">2. &quot;爱情如果能超越生死，那该多好&quot;</span><br><span class="line">3. ...</span><br><span class="line">微小说：《数字时代的灵异情缘》</span><br><span class="line">2024年，程序员宁晨在修复一个古老的数据库时，</span><br><span class="line">发现了一段被遗忘的AI代码&quot;小倩&quot;...</span><br></pre></td></tr></table></figure>
-
-<h2 id="🚀-快速开始"><a href="#🚀-快速开始" class="headerlink" title="🚀 快速开始"></a>🚀 快速开始</h2><h3 id="环境要求"><a href="#环境要求" class="headerlink" title="环境要求"></a>环境要求</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install openai</span><br></pre></td></tr></table></figure>
-
-<h3 id="配置使用"><a href="#配置使用" class="headerlink" title="配置使用"></a>配置使用</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 简单三步配置</span></span><br><span class="line">API_KEY = <span class="string">&quot;您的API密钥&quot;</span></span><br><span class="line">INPUT_FILE_PATH = <span class="string">&quot;电影台词.txt&quot;</span></span><br><span class="line">MODEL_NAME = <span class="string">&quot;deepseek-ai/DeepSeek-R1&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="运行脚本"><a href="#运行脚本" class="headerlink" title="运行脚本"></a>运行脚本</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python movie_analysis.py</span><br></pre></td></tr></table></figure>
-
-<h2 id="🎪-项目特色"><a href="#🎪-项目特色" class="headerlink" title="🎪 项目特色"></a>🎪 项目特色</h2><h3 id="🔥-技术创新点"><a href="#🔥-技术创新点" class="headerlink" title="🔥 技术创新点"></a>🔥 技术创新点</h3><ul>
-<li><strong>智能上下文管理</strong>：自动维护对话历史，优化token使用</li>
-<li><strong>动态prompt调整</strong>：根据输入内容自动调整指令细节</li>
-<li><strong>错误恢复机制</strong>：网络异常时自动重试，保证任务完成</li>
-<li><strong>进度实时反馈</strong>：流式输出让用户看到处理过程</li>
-</ul>
-<h3 id="🎨-Prompt设计哲学"><a href="#🎨-Prompt设计哲学" class="headerlink" title="🎨 Prompt设计哲学"></a>🎨 Prompt设计哲学</h3><ol>
-<li><strong>明确指令优先</strong>：使用编号、强调等让模型准确理解</li>
-<li><strong>格式强制约束</strong>：通过具体示例规范输出格式</li>
-<li><strong>分阶段处理</strong>：复杂任务拆解为简单步骤</li>
-<li><strong>角色代入法</strong>：赋予模型特定角色提升质量</li>
-</ol>
-<h2 id="🔧-应用场景"><a href="#🔧-应用场景" class="headerlink" title="🔧 应用场景"></a>🔧 应用场景</h2><h3 id="影视行业"><a href="#影视行业" class="headerlink" title="影视行业"></a>影视行业</h3><ul>
-<li>剧本分析和优化建议</li>
-<li>经典台词数据库建设</li>
-<li>跨时代故事改编创意</li>
-</ul>
-<h3 id="教育研究"><a href="#教育研究" class="headerlink" title="教育研究"></a>教育研究</h3><ul>
-<li>电影文学课程辅助工具</li>
-<li>叙事结构分析研究</li>
-<li>跨文化影视对比</li>
-</ul>
-<h3 id="个人兴趣"><a href="#个人兴趣" class="headerlink" title="个人兴趣"></a>个人兴趣</h3><ul>
-<li>观影笔记智能整理</li>
-<li>电影主题深度理解</li>
-<li>创意写作灵感来源</li>
-</ul>
-<h2 id="📊-项目亮点"><a href="#📊-项目亮点" class="headerlink" title="📊 项目亮点"></a>📊 项目亮点</h2><ol>
-<li><strong>智能化程度高</strong>：自动识别电影、分析主题、提取精华</li>
-<li><strong>创作能力强</strong>：不仅能分析，还能创作全新内容</li>
-<li><strong>用户体验好</strong>：一键式操作，结果清晰易懂</li>
-<li><strong>扩展性强</strong>：支持多种AI模型和API平台</li>
-<li><strong>实用价值大</strong>：适合影视爱好者、创作者、研究者</li>
-</ol>
-
       
     </div>
 
