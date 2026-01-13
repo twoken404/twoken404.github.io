@@ -144,12 +144,12 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">46</span>
+          <span class="site-state-item-count">47</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
@@ -183,6 +183,166 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://let-ai.com/202512/b822d2483ba3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="twoken">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AI微小说">
+      <meta itemprop="description" content="项目简介：本项目将电影台词转化为AI文学创作的灵感源泉。系统通过三个核心模块：1. 字幕抓取与清洗 → 获得纯净文本；2. 台词分段与解析 → 理解电影语境 ；3. AI识别与创作 → 输出微小说。实现从影视语言到文学作品的智能转换。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | AI微小说">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/202512/b822d2483ba3/" class="post-title-link" itemprop="url">古诗色韵：用SHA-1算法为古典诗词生成专属色谱</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2025-12-24 00:00:00 / Modified: 15:59:46" itemprop="dateCreated datePublished" datetime="2025-12-24T00:00:00+08:00">2025-12-24</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="代码与古诗的色彩对话，解码每日诗词的色彩基因图谱"><a href="#代码与古诗的色彩对话，解码每日诗词的色彩基因图谱" class="headerlink" title="代码与古诗的色彩对话，解码每日诗词的色彩基因图谱"></a>代码与古诗的色彩对话，解码每日诗词的色彩基因图谱</h2><h3 id="项目起源"><a href="#项目起源" class="headerlink" title="项目起源"></a>项目起源</h3><p>我一直好奇：如果给每首古诗一个「颜色签名」会怎样？不是主观的艺术创作，而是通过确定的算法，让每首诗都能生成独特的、可复现的色彩组合。</p>
+<p>于是有了「古诗色韵」项目——用SHA-1哈希算法将诗词文本转化为视觉色谱。</p>
+<h3 id="技术原理"><a href="#技术原理" class="headerlink" title="技术原理"></a>技术原理</h3><h4 id="1-SHA-1：从文字到数字指纹"><a href="#1-SHA-1：从文字到数字指纹" class="headerlink" title="1. SHA-1：从文字到数字指纹"></a>1. SHA-1：从文字到数字指纹</h4><p>SHA-1（安全哈希算法1）会为任何输入生成一个40位的十六进制字符串（160位二进制）。关键特性：</p>
+<ul>
+<li><strong>确定性</strong>：相同输入永远得到相同输出</li>
+<li><strong>雪崩效应</strong>：微小改动导致结果天差地别</li>
+<li><strong>不可逆</strong>：无法从哈希值反推原文</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// SHA-1计算函数</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">sha1</span>(<span class="params">str</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> encoder = <span class="keyword">new</span> <span class="title class_">TextEncoder</span>();</span><br><span class="line">    <span class="keyword">const</span> data = encoder.<span class="title function_">encode</span>(str);</span><br><span class="line">    <span class="keyword">const</span> hashBuffer = <span class="keyword">await</span> crypto.<span class="property">subtle</span>.<span class="title function_">digest</span>(<span class="string">&#x27;SHA-1&#x27;</span>, data);</span><br><span class="line">    <span class="keyword">const</span> hashArray = <span class="title class_">Array</span>.<span class="title function_">from</span>(<span class="keyword">new</span> <span class="title class_">Uint8Array</span>(hashBuffer));</span><br><span class="line">    <span class="keyword">return</span> hashArray.<span class="title function_">map</span>(<span class="function"><span class="params">b</span> =&gt;</span> b.<span class="title function_">toString</span>(<span class="number">16</span>).<span class="title function_">padStart</span>(<span class="number">2</span>, <span class="string">&#x27;0&#x27;</span>)).<span class="title function_">join</span>(<span class="string">&#x27;&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-从哈希值到颜色值"><a href="#2-从哈希值到颜色值" class="headerlink" title="2. 从哈希值到颜色值"></a>2. 从哈希值到颜色值</h4><p>SHA-1的40个十六进制字符，每6个字符可以构成一个CSS颜色值：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">generateColors</span>(<span class="params">text, numColors = <span class="number">5</span></span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> hash = <span class="keyword">await</span> <span class="title function_">sha1</span>(text);</span><br><span class="line">    <span class="keyword">const</span> colors = [];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; numColors; i++) &#123;</span><br><span class="line">        <span class="keyword">const</span> start = (i * <span class="number">6</span>) % <span class="number">34</span>;  <span class="comment">// 滑动窗口提取</span></span><br><span class="line">        <span class="keyword">const</span> colorHex = <span class="string">&quot;#&quot;</span> + hash.<span class="title function_">substring</span>(start, start + <span class="number">6</span>);</span><br><span class="line">        colors.<span class="title function_">push</span>(colorHex);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> colors;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>提取逻辑</strong>：</p>
+<ul>
+<li>第1色：字符0-5 → <code>#2aae6c</code></li>
+<li>第2色：字符6-11 → <code>#35c94f</code></li>
+<li>第3色：字符12-17 → <code>#cfb415</code></li>
+<li>以此类推…</li>
+</ul>
+<h4 id="3-诗词解析"><a href="#3-诗词解析" class="headerlink" title="3. 诗词解析"></a>3. 诗词解析</h4><p>以宋代刘过的《唐多令》为例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">唐多令</span><br><span class="line">宋代 · 刘过</span><br><span class="line">芦叶满汀洲，寒沙带浅流。</span><br><span class="line">二十年重过南楼。</span><br><span class="line">柳下系船犹未稳，能几日，又中秋。</span><br><span class="line">黄鹤断矶头，故人今在否？</span><br><span class="line">旧江山浑是新愁。</span><br><span class="line">欲买桂花同载酒，终不似、少年游。</span><br></pre></td></tr></table></figure>
+
+<p>我们分别提取：</p>
+<ul>
+<li>标题：《唐多令》</li>
+<li>作者：刘过</li>
+<li>各分句诗词</li>
+<li>全诗整体</li>
+</ul>
+<h3 id="实战演示：《唐多令》的色彩基因"><a href="#实战演示：《唐多令》的色彩基因" class="headerlink" title="实战演示：《唐多令》的色彩基因"></a>实战演示：《唐多令》的色彩基因</h3><h4 id="原始数据"><a href="#原始数据" class="headerlink" title="原始数据"></a>原始数据</h4><ul>
+<li><strong>标题</strong>：唐多令 → SHA-1: <code>99ec54902060ec981a...</code></li>
+<li><strong>作者</strong>：刘过 → SHA-1: <code>5630828ac3d4b40e7a...</code></li>
+<li><strong>全诗</strong>：完整文本 → SHA-1: <code>f6f32b26f65144ea00...</code></li>
+</ul>
+<h4 id="生成的色谱展示"><a href="#生成的色谱展示" class="headerlink" title="生成的色谱展示"></a>生成的色谱展示</h4><h5 id="1-《唐多令》的题目色彩"><a href="#1-《唐多令》的题目色彩" class="headerlink" title="1. 《唐多令》的题目色彩"></a>1. 《唐多令》的题目色彩</h5><div style="width:200px;height:200px;background:linear-gradient(135deg,#99ec54,#902060,#ec981a);margin:20px auto;border:2px solid #333;"></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">颜色值：#99ec54 → #902060 → #ec981a</span><br></pre></td></tr></table></figure>
+
+<h5 id="2-刘过的色彩"><a href="#2-刘过的色彩" class="headerlink" title="2. 刘过的色彩"></a>2. 刘过的色彩</h5><div style="width:200px;height:200px;background:linear-gradient(135deg,#563082,#8ac3d4,#b40e7a);margin:20px auto;border:2px solid #333;"></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">颜色值：#563082 → #8ac3d4 → #b40e7a</span><br></pre></td></tr></table></figure>
+
+<h5 id="3-分句色谱"><a href="#3-分句色谱" class="headerlink" title="3. 分句色谱"></a>3. 分句色谱</h5><div style="display:flex;justify-content:center;flex-wrap:wrap;gap:15px;margin:30px 0;">
+<div style="width:80px;height:80px;background:linear-gradient(135deg,#894fab,#7ad908,#1fd433);border:1px solid #ddd;"></div>
+<div style="width:80px;height:80px;background:linear-gradient(135deg,#288238,#3776cc,#36e531);border:1px solid #ddd;"></div>
+<div style="width:80px;height:80px;background:linear-gradient(135deg,#d3f512,#49201d,#4b5f04);border:1px solid #ddd;"></div>
+</div>
+
+<h5 id="4-全诗整体色彩"><a href="#4-全诗整体色彩" class="headerlink" title="4. 全诗整体色彩"></a>4. 全诗整体色彩</h5><div style="width:200px;height:200px;background:linear-gradient(135deg,#f6f32b,#26f651,#44ea00,#fbdcbb,#3727df);margin:20px auto;border:2px solid #333;"></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5色渐变：#f6f32b → #26f651 → #44ea00 → #fbdcbb → #3727df</span><br></pre></td></tr></table></figure>
+
+<h3 id="技术细节"><a href="#技术细节" class="headerlink" title="技术细节"></a>技术细节</h3><h4 id="为什么选择SHA-1？"><a href="#为什么选择SHA-1？" class="headerlink" title="为什么选择SHA-1？"></a>为什么选择SHA-1？</h4><ol>
+<li><strong>固定长度</strong>：始终40个十六进制字符，便于颜色提取</li>
+<li><strong>足够分散</strong>：哈希冲突概率极低（约1&#x2F;2^80）</li>
+<li><strong>广泛支持</strong>：所有现代浏览器都原生支持</li>
+<li><strong>适度安全</strong>：虽然密码学上已被淘汰，但对本项目足够</li>
+</ol>
+<h4 id="颜色提取算法"><a href="#颜色提取算法" class="headerlink" title="颜色提取算法"></a>颜色提取算法</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 关键算法：滑动窗口提取</span></span><br><span class="line"><span class="keyword">const</span> start = (i * <span class="number">6</span>) % <span class="number">34</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 为什么是%34？</span></span><br><span class="line"><span class="comment">// 40个字符 - 6个字符/颜色 = 34</span></span><br><span class="line"><span class="comment">// 确保提取不越界，且能循环利用哈希值</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="为什么不是随机颜色？"><a href="#为什么不是随机颜色？" class="headerlink" title="为什么不是随机颜色？"></a>为什么不是随机颜色？</h4><ul>
+<li><strong>可复现性</strong>：同一首诗永远生成相同颜色</li>
+<li><strong>文本关联</strong>：颜色直接源于文本的「数字DNA」</li>
+<li><strong>确定之美</strong>：算法美学强调过程而非结果随机</li>
+</ul>
+<h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><ol>
+<li><strong>数字藏书票</strong>：为电子版古籍生成视觉标识</li>
+<li><strong>诗词可视化</strong>：将文学韵律转化为色彩韵律</li>
+<li><strong>教育工具</strong>：让学生「看见」诗词的结构</li>
+<li><strong>艺术创作</strong>：算法生成的色卡用于设计</li>
+</ol>
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><p>完整的工作流代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 核心代码片段</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">processPoem</span>(<span class="params">poemText</span>) &#123;</span><br><span class="line">    <span class="comment">// 1. 解析诗词结构</span></span><br><span class="line">    <span class="keyword">const</span> &#123;title, author, lines&#125; = <span class="title function_">parsePoem</span>(poemText);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 2. 生成各部分的颜色</span></span><br><span class="line">    <span class="keyword">const</span> titleColors = <span class="keyword">await</span> <span class="title function_">generateColors</span>(title, <span class="number">3</span>);</span><br><span class="line">    <span class="keyword">const</span> authorColors = <span class="keyword">await</span> <span class="title function_">generateColors</span>(author, <span class="number">3</span>);</span><br><span class="line">    <span class="keyword">const</span> lineColors = <span class="keyword">await</span> <span class="title class_">Promise</span>.<span class="title function_">all</span>(lines.<span class="title function_">map</span>(<span class="function"><span class="params">line</span> =&gt;</span> <span class="title function_">generateColors</span>(line, <span class="number">3</span>)));</span><br><span class="line">    <span class="keyword">const</span> fullColors = <span class="keyword">await</span> <span class="title function_">generateColors</span>(lines.<span class="title function_">join</span>(<span class="string">&#x27;&#x27;</span>), <span class="number">5</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 3. 生成HTML可视化</span></span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">generateVisualization</span>(&#123;</span><br><span class="line">        title, author, lines,</span><br><span class="line">        titleColors, authorColors, lineColors, fullColors</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="延伸思考"><a href="#延伸思考" class="headerlink" title="延伸思考"></a>延伸思考</h3><p>这个项目让我想到几个有趣的方向：</p>
+<h4 id="1-不同哈希算法的比较"><a href="#1-不同哈希算法的比较" class="headerlink" title="1. 不同哈希算法的比较"></a>1. 不同哈希算法的比较</h4><ul>
+<li>SHA-256：64字符，更多颜色组合</li>
+<li>MD5：32字符</li>
+<li>自定义算法：针对诗词特性优化</li>
+</ul>
+<h4 id="2-颜色空间的拓展"><a href="#2-颜色空间的拓展" class="headerlink" title="2. 颜色空间的拓展"></a>2. 颜色空间的拓展</h4><p>目前使用RGB十六进制，可尝试：</p>
+<ul>
+<li>HSL色彩空间：控制饱和度、亮度</li>
+<li>LAB色彩空间：更符合人眼感知</li>
+<li>中国传统色彩体系：绛红、月白、黛青…</li>
+</ul>
+<h4 id="3-动态可视化"><a href="#3-动态可视化" class="headerlink" title="3. 动态可视化"></a>3. 动态可视化</h4><ul>
+<li>随着诗词朗读，颜色流动变化</li>
+<li>交互式探索：点击色块查看对应诗句</li>
+<li>时间维度：不同时期的诗词色彩演变</li>
+</ul>
+<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p>「古诗色韵」不是要用算法取代艺术，而是寻找技术与人文的新对话方式。当SHA-1遇上《唐多令》，当十六进制代码遇见「芦叶满汀洲」，我们看到的是数字时代对古典美学的重新解读。</p>
+<p>每首古诗都有其独特的「色彩基因」，而我们只是用代码让这些基因「显形」罢了。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -876,78 +1036,6 @@
           <p>他从师父手中接过药箱时，听见那句话：“我们习武之人，第一口咽不下去的气，是口气。”药箱很沉，装满了膏药与粉末。师父总说，中国的火药拿来放烟花，外国的火药就拿来开大炮。他穿过潮湿的巷子，去给咳嗽的婆婆送药。婆婆问他，天底下哪有这么好的衙门？他只是笑笑。</p>
 <p>黄昏时，他爬上旧钟楼，看见港口停着外国船只。一个戴眼镜的男人也在那里，望着海面说：“如果这个世界有金山的话，这些洋船为什么要来我们的港口呢？”风很大，男人的围巾被吹起。他说，我叫孙文，顾名思义，就是文明的文。文明不是武器，是道理。</p>
 <p>夜里，他打开药箱整理，发现师父在一包药材里夹了张字条：也许我们已经站在金山上了。他想起白天的对话，想起婆婆的咳嗽，想起师父熬药时专注的侧脸。药香弥漫开来，像某种微弱的信号。他继续分拣药材，动作很轻，仿佛在调配一剂复杂的未来。远处隐约传来烟花的闷响。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://let-ai.com/202512/689033214cd2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="twoken">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="AI微小说">
-      <meta itemprop="description" content="项目简介：本项目将电影台词转化为AI文学创作的灵感源泉。系统通过三个核心模块：1. 字幕抓取与清洗 → 获得纯净文本；2. 台词分段与解析 → 理解电影语境 ；3. AI识别与创作 → 输出微小说。实现从影视语言到文学作品的智能转换。">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | AI微小说">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/202512/689033214cd2/" class="post-title-link" itemprop="url">微小说：碎镜拼图</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2025-12-16 11:05:48 / Modified: 11:06:19" itemprop="dateCreated datePublished" datetime="2025-12-16T11:05:48+08:00">2025-12-16</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>照相馆的暗房里，陈默每天冲洗着陌生人的相片。他的工作是在旧照修复中辨认面目，但自己却想不起十岁前的任何事。一张反复出现的团体照里，总有个面容被刮去的男孩身影。某天，他发现自己右肩胛骨上的旧伤疤形状，与照片中男孩衣襟的破损处完全重合。</p>
-<p>他开始收集这座城市里所有被遗弃的镜子碎片。在第七个雾霭沉沉的凌晨，当最后一块碎片嵌进卧室墙壁的拼图时，他看见镜中映出的不再是孤独的修复师，而是三十年前孤儿院天井里拍手的孩子们。那个被刮去的男孩正对着他微笑——原来等待被找寻的，一直是寻找者自己。</p>
-<p>陈默伸手触碰冰凉的镜面，指尖掠过所有轮回里沉默的相逢。此时暗房中的显影液正悄然浸透一张空白相纸，慢慢浮出黑夜与黎明交界处的第一缕光。</p>
 
       
     </div>
