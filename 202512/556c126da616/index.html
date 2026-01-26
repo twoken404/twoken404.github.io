@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="8jxADkCvjgic7e8QubnSq1fnCarsoYpVz-KP0qa-qLg">
+  <meta name="msvalidate.01" content="703C79C95F4090EA50412E7E779B3DCF">
+  <meta name="yandex-verification" content="1d508c508c8313a8">
+  <meta name="baidu-site-verification" content="codeva-BUR8XfmnHk">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"let-ai.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.26.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3973904360441679"
+     crossorigin="anonymous"></script>
+
+    <meta name="description" content="本文使用的数据分析代码已开源，仓库地址：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DeepSeek 2025年度使用时间分析报告">
+<meta property="og:url" content="http://let-ai.com/202512/556c126da616/index.html">
+<meta property="og:site_name" content="AI微小说">
+<meta property="og:description" content="本文使用的数据分析代码已开源，仓库地址：">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-12-30T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-01-26T00:56:21.471Z">
+<meta property="article:author" content="twoken">
+<meta property="article:tag" content="openai,claude,modelscope,coze,微小说">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://let-ai.com/202512/556c126da616/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://let-ai.com/202512/556c126da616/","path":"202512/556c126da616/","title":"DeepSeek 2025年度使用时间分析报告"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>DeepSeek 2025年度使用时间分析报告 | AI微小说</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WJ48W3LM1R"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-WJ48W3LM1R","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js" defer></script>
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">AI微小说</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">大模型写微小说</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>Sitemap</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%85-%E6%97%B6%E9%97%B4%E8%8C%83%E5%9B%B4%E6%A6%82%E8%A7%88"><span class="nav-number">1.</span> <span class="nav-text">📅 时间范围概览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%88-%E6%9C%88%E5%BA%A6%E6%B4%BB%E8%B7%83%E8%B6%8B%E5%8A%BF%E5%88%86%E6%9E%90"><span class="nav-number">2.</span> <span class="nav-text">📈 月度活跃趋势分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8F%86-%E5%B9%B4%E5%BA%A6%E6%9C%80%E6%B4%BB%E8%B7%83%E6%97%A5%E6%9C%9F-Top-10"><span class="nav-number">3.</span> <span class="nav-text">🏆 年度最活跃日期 Top 10</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%8F%B0-%E6%AF%8F%E6%97%A5%E4%BD%BF%E7%94%A8%E6%97%B6%E6%AE%B5%E5%88%86%E5%B8%83"><span class="nav-number">4.</span> <span class="nav-text">⏰ 每日使用时段分布</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8F%A2-%E5%B7%A5%E4%BD%9C%E6%97%A5-vs-%E5%91%A8%E6%9C%AB%E5%AF%B9%E6%AF%94"><span class="nav-number">5.</span> <span class="nav-text">🏢 工作日 vs 周末对比</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%86-%E6%AF%8F%E5%91%A8%E4%BD%BF%E7%94%A8%E5%88%86%E5%B8%83"><span class="nav-number">6.</span> <span class="nav-text">📆 每周使用分布</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8E%AF-%E6%9C%88%E5%BA%A6%E6%B4%BB%E8%B7%83%E5%BA%A6%E7%83%AD%E5%8A%9B%E5%9B%BE"><span class="nav-number">7.</span> <span class="nav-text">🎯 月度活跃度热力图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%92%A1-%E4%BD%BF%E7%94%A8%E6%A8%A1%E5%BC%8F%E6%80%BB%E7%BB%93"><span class="nav-number">8.</span> <span class="nav-text">💡 使用模式总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%94%8D-%E6%A8%A1%E5%BC%8F%E8%AF%86%E5%88%AB"><span class="nav-number">8.1.</span> <span class="nav-text">🔍 模式识别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%91%A8%E2%80%8D%F0%9F%92%BC-xx%E7%8C%BF%E8%BA%AB%E4%BB%BD%E5%8C%B9%E9%85%8D%E5%BA%A6"><span class="nav-number">8.2.</span> <span class="nav-text">👨‍💼 xx猿身份匹配度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%93%8A-%E5%B9%B4%E5%BA%A6%E6%88%90%E9%95%BF%E8%BD%A8%E8%BF%B9"><span class="nav-number">8.3.</span> <span class="nav-text">📊 年度成长轨迹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%8E%AF-2026%E5%B9%B4%E4%BC%98%E5%8C%96%E5%BB%BA%E8%AE%AE"><span class="nav-number">8.4.</span> <span class="nav-text">🎯 2026年优化建议</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="twoken"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">twoken</p>
+  <div class="site-description" itemprop="description">项目简介：本项目将电影台词转化为AI文学创作的灵感源泉。系统通过三个核心模块：1. 字幕抓取与清洗 → 获得纯净文本；2. 台词分段与解析 → 理解电影语境 ；3. AI识别与创作 → 输出微小说。实现从影视语言到文学作品的智能转换。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">54</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/twoken404" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;twoken404" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:admin@let-ai.com" title="E-Mail → mailto:admin@let-ai.com" rel="noopener me"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/twoken" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;twoken" rel="noopener me" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.facebook.com/twoken" title="FB Page → https:&#x2F;&#x2F;www.facebook.com&#x2F;twoken" rel="noopener me" target="_blank"><i class="fab fa-facebook fa-fw"></i>FB Page</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://let-ai.com/202512/556c126da616/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="twoken">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AI微小说">
+      <meta itemprop="description" content="项目简介：本项目将电影台词转化为AI文学创作的灵感源泉。系统通过三个核心模块：1. 字幕抓取与清洗 → 获得纯净文本；2. 台词分段与解析 → 理解电影语境 ；3. AI识别与创作 → 输出微小说。实现从影视语言到文学作品的智能转换。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="DeepSeek 2025年度使用时间分析报告 | AI微小说">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          DeepSeek 2025年度使用时间分析报告
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2025-12-31 00:00:00" itemprop="dateCreated datePublished" datetime="2025-12-31T00:00:00+08:00">2025-12-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2026-01-26 08:56:21" itemprop="dateModified" datetime="2026-01-26T08:56:21+08:00">2026-01-26</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><blockquote>
+<p>本文使用的数据分析代码已开源，仓库地址：</p>
+</blockquote>
+<span id="more"></span>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/twoken404/grok_and_deepseek_2025_analyze/">https://github.com/twoken404/grok_and_deepseek_2025_analyze&#x2F;</a></p>
+</blockquote>
+<h2 id="📅-时间范围概览"><a href="#📅-时间范围概览" class="headerlink" title="📅 时间范围概览"></a>📅 <strong>时间范围概览</strong></h2><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>详情</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>记录时间</strong></td>
+<td>2024-12-26 至 2025-12-31</td>
+</tr>
+<tr>
+<td><strong>总活跃天数</strong></td>
+<td>221 天</td>
+</tr>
+<tr>
+<td><strong>时间跨度</strong></td>
+<td>370 天</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="📈-月度活跃趋势分析"><a href="#📈-月度活跃趋势分析" class="headerlink" title="📈 月度活跃趋势分析"></a>📈 <strong>月度活跃趋势分析</strong></h2><table>
+<thead>
+<tr>
+<th>月份</th>
+<th>对话次数</th>
+<th>消息总数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2024年12月</td>
+<td>1次</td>
+<td>4条</td>
+</tr>
+<tr>
+<td>2025年01月</td>
+<td>21次</td>
+<td>70条</td>
+</tr>
+<tr>
+<td>2025年02月</td>
+<td>27次</td>
+<td>202条</td>
+</tr>
+<tr>
+<td>2025年03月</td>
+<td>16次</td>
+<td>90条</td>
+</tr>
+<tr>
+<td>2025年04月</td>
+<td>28次</td>
+<td>321条</td>
+</tr>
+<tr>
+<td>2025年05月</td>
+<td>32次</td>
+<td>150条</td>
+</tr>
+<tr>
+<td>2025年06月</td>
+<td>20次</td>
+<td>95条</td>
+</tr>
+<tr>
+<td>2025年07月</td>
+<td>21次</td>
+<td>125条</td>
+</tr>
+<tr>
+<td>2025年08月</td>
+<td>21次</td>
+<td>123条</td>
+</tr>
+<tr>
+<td>2025年09月</td>
+<td>23次</td>
+<td>251条</td>
+</tr>
+<tr>
+<td>2025年10月</td>
+<td>39次</td>
+<td>535条</td>
+</tr>
+<tr>
+<td>2025年11月</td>
+<td>77次</td>
+<td>982条</td>
+</tr>
+<tr>
+<td><strong>2025年12月</strong></td>
+<td><strong>139次</strong></td>
+<td><strong>1462条</strong></td>
+</tr>
+</tbody></table>
+<p><strong>趋势解读</strong>：下半年使用频率显著上升，尤其是11-12月进入“密集使用期”。</p>
+<hr>
+<h2 id="🏆-年度最活跃日期-Top-10"><a href="#🏆-年度最活跃日期-Top-10" class="headerlink" title="🏆 年度最活跃日期 Top 10"></a>🏆 <strong>年度最活跃日期 Top 10</strong></h2><table>
+<thead>
+<tr>
+<th>排名</th>
+<th>日期</th>
+<th>星期</th>
+<th>总消息数</th>
+<th>你提问</th>
+<th>AI回复</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>2025-12-14</td>
+<td>周日</td>
+<td>174条</td>
+<td>87条</td>
+<td>87条</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2025-11-08</td>
+<td>周六</td>
+<td>114条</td>
+<td>57条</td>
+<td>57条</td>
+</tr>
+<tr>
+<td>3</td>
+<td>2025-12-24</td>
+<td>周三</td>
+<td>110条</td>
+<td>55条</td>
+<td>55条</td>
+</tr>
+<tr>
+<td>4</td>
+<td>2025-10-21</td>
+<td>周二</td>
+<td>96条</td>
+<td>48条</td>
+<td>48条</td>
+</tr>
+<tr>
+<td>5</td>
+<td>2025-11-22</td>
+<td>周六</td>
+<td>96条</td>
+<td>48条</td>
+<td>48条</td>
+</tr>
+<tr>
+<td>6</td>
+<td>2025-12-31</td>
+<td>周三</td>
+<td>94条</td>
+<td>44条</td>
+<td>50条</td>
+</tr>
+<tr>
+<td>7</td>
+<td>2025-12-21</td>
+<td>周日</td>
+<td>88条</td>
+<td>44条</td>
+<td>44条</td>
+</tr>
+<tr>
+<td>8</td>
+<td>2025-11-28</td>
+<td>周五</td>
+<td>84条</td>
+<td>42条</td>
+<td>42条</td>
+</tr>
+<tr>
+<td>9</td>
+<td>2025-12-16</td>
+<td>周二</td>
+<td>82条</td>
+<td>41条</td>
+<td>41条</td>
+</tr>
+<tr>
+<td>10</td>
+<td>2025-12-25</td>
+<td>周四</td>
+<td>82条</td>
+<td>41条</td>
+<td>41条</td>
+</tr>
+</tbody></table>
+<p><strong>特点</strong>：最活跃日期中，<strong>周末（4天）和工作日（6天）</strong> 分布均衡，显示全时段深度使用习惯。</p>
+<hr>
+<h2 id="⏰-每日使用时段分布"><a href="#⏰-每日使用时段分布" class="headerlink" title="⏰ 每日使用时段分布"></a>⏰ <strong>每日使用时段分布</strong></h2><table>
+<thead>
+<tr>
+<th>时段</th>
+<th>消息数量</th>
+<th>占比</th>
+<th>视觉化</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>晚上 (18-22点)</strong></td>
+<td>1,270条</td>
+<td><strong>28.8%</strong></td>
+<td>██████████████</td>
+</tr>
+<tr>
+<td><strong>下午 (14-18点)</strong></td>
+<td>1,158条</td>
+<td><strong>26.3%</strong></td>
+<td>█████████████</td>
+</tr>
+<tr>
+<td><strong>上午 (9-12点)</strong></td>
+<td>679条</td>
+<td><strong>15.4%</strong></td>
+<td>███████</td>
+</tr>
+<tr>
+<td><strong>深夜 (22-24点)</strong></td>
+<td>574条</td>
+<td><strong>13.0%</strong></td>
+<td>██████</td>
+</tr>
+<tr>
+<td><strong>中午 (12-14点)</strong></td>
+<td>488条</td>
+<td><strong>11.1%</strong></td>
+<td>█████</td>
+</tr>
+<tr>
+<td><strong>深夜 (0-6点)</strong></td>
+<td>189条</td>
+<td><strong>4.3%</strong></td>
+<td>██</td>
+</tr>
+<tr>
+<td><strong>早晨 (6-9点)</strong></td>
+<td>52条</td>
+<td><strong>1.2%</strong></td>
+<td>█</td>
+</tr>
+</tbody></table>
+<p><strong>时段特征</strong>：</p>
+<ul>
+<li><strong>晚间高峰</strong>：18-22点使用最密集</li>
+<li><strong>下午次高峰</strong>：14-18点保持高活跃度</li>
+<li><strong>形成“下午+晚上”双峰模式</strong></li>
+</ul>
+<hr>
+<h2 id="🏢-工作日-vs-周末对比"><a href="#🏢-工作日-vs-周末对比" class="headerlink" title="🏢 工作日 vs 周末对比"></a>🏢 <strong>工作日 vs 周末对比</strong></h2><table>
+<thead>
+<tr>
+<th>类别</th>
+<th>消息数量</th>
+<th>占比</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>工作日</strong></td>
+<td>3,209条</td>
+<td><strong>72.8%</strong></td>
+<td>主要使用时段</td>
+</tr>
+<tr>
+<td><strong>周末</strong></td>
+<td>1,201条</td>
+<td><strong>27.2%</strong></td>
+<td>补充学习时间</td>
+</tr>
+</tbody></table>
+<p><strong>工作日日均</strong>：约12.8条消息&#x2F;工作日<br><strong>周末日均</strong>：约22.2条消息&#x2F;周末日</p>
+<blockquote>
+<p>💡 <strong>分析</strong>：虽主要在<strong>工作时间使用</strong>，但周末单日活跃度更高，显示持续学习热情。</p>
+</blockquote>
+<hr>
+<h2 id="📆-每周使用分布"><a href="#📆-每周使用分布" class="headerlink" title="📆 每周使用分布"></a>📆 <strong>每周使用分布</strong></h2><table>
+<thead>
+<tr>
+<th>星期</th>
+<th>消息数量</th>
+<th>视觉化</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>周五</strong></td>
+<td>850条</td>
+<td>██████████████████████████████</td>
+</tr>
+<tr>
+<td><strong>周二</strong></td>
+<td>697条</td>
+<td>███████████████████████████</td>
+</tr>
+<tr>
+<td><strong>周一</strong></td>
+<td>679条</td>
+<td>█████████████████████████</td>
+</tr>
+<tr>
+<td><strong>周三</strong></td>
+<td>580条</td>
+<td>████████████████████</td>
+</tr>
+<tr>
+<td><strong>周六</strong></td>
+<td>613条</td>
+<td>█████████████████████</td>
+</tr>
+<tr>
+<td><strong>周日</strong></td>
+<td>588条</td>
+<td>████████████████████</td>
+</tr>
+<tr>
+<td><strong>周四</strong></td>
+<td>403条</td>
+<td>██████████████</td>
+</tr>
+</tbody></table>
+<p><strong>规律</strong>：周中强度递减，<strong>周五</strong>达到峰值，可能为周末项目做准备。</p>
+<hr>
+<h2 id="🎯-月度活跃度热力图"><a href="#🎯-月度活跃度热力图" class="headerlink" title="🎯 月度活跃度热力图"></a>🎯 <strong>月度活跃度热力图</strong></h2><table>
+<thead>
+<tr>
+<th>月份</th>
+<th>消息数</th>
+<th>趋势</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>12月</strong></td>
+<td>1,474条</td>
+<td>🚀 <strong>年度峰值</strong></td>
+</tr>
+<tr>
+<td><strong>11月</strong></td>
+<td>980条</td>
+<td>📈 高速增长</td>
+</tr>
+<tr>
+<td><strong>10月</strong></td>
+<td>529条</td>
+<td>📈 稳定上升</td>
+</tr>
+<tr>
+<td><strong>9月</strong></td>
+<td>251条</td>
+<td>📊 稳步发展</td>
+</tr>
+<tr>
+<td><strong>4月</strong></td>
+<td>290条</td>
+<td>📊 年中活跃</td>
+</tr>
+<tr>
+<td><strong>2月</strong></td>
+<td>202条</td>
+<td>📈 年初起步</td>
+</tr>
+<tr>
+<td><strong>1月</strong></td>
+<td>70条</td>
+<td>🎯 年初探索</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="💡-使用模式总结"><a href="#💡-使用模式总结" class="headerlink" title="💡 使用模式总结"></a>💡 <strong>使用模式总结</strong></h2><h3 id="🔍-模式识别"><a href="#🔍-模式识别" class="headerlink" title="🔍 模式识别"></a><strong>🔍 模式识别</strong></h3><p>你的使用模式属于 <strong>「晚间学习型」</strong> 与 <strong>「工作辅助型」</strong> 的结合：</p>
+<p><strong>晚间学习特征</strong>：</p>
+<ul>
+<li>18-22点使用高峰（28.8%）</li>
+<li>周末单日活跃度更高</li>
+<li>节奏相对放松，探索性强</li>
+</ul>
+<p><strong>工作辅助特征</strong>：</p>
+<ul>
+<li>72.8%在工作日使用</li>
+<li>下午时段（14-18点）活跃度高</li>
+<li>解决实际工作问题导向</li>
+</ul>
+<h3 id="👨‍💼-xx猿身份匹配度"><a href="#👨‍💼-xx猿身份匹配度" class="headerlink" title="👨‍💼 xx猿身份匹配度"></a><strong>👨‍💼 xx猿身份匹配度</strong></h3><table>
+<thead>
+<tr>
+<th>方面</th>
+<th>表现</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>工作时间融合</strong></td>
+<td>高</td>
+<td>AI深度融入日常工作流程</td>
+</tr>
+<tr>
+<td><strong>持续学习意愿</strong></td>
+<td>强</td>
+<td>业余时间持续技术提升</td>
+</tr>
+<tr>
+<td><strong>实际问题导向</strong></td>
+<td>明确</td>
+<td>以解决政务问题为目标</td>
+</tr>
+<tr>
+<td><strong>技术应用深度</strong></td>
+<td>深化</td>
+<td>从基础咨询到系统搭建</td>
+</tr>
+</tbody></table>
+<h3 id="📊-年度成长轨迹"><a href="#📊-年度成长轨迹" class="headerlink" title="📊 年度成长轨迹"></a><strong>📊 年度成长轨迹</strong></h3><ol>
+<li><strong>起步期</strong>（1-3月）：每月&lt;100条，探索性使用</li>
+<li><strong>成长期</strong>（4-9月）：每月100-300条，稳定提升</li>
+<li><strong>爆发期</strong>（10-12月）：每月&gt;500条，深度依赖</li>
+<li><strong>峰值月</strong>（12月）：1,474条，技术应用成熟期</li>
+</ol>
+<h3 id="🎯-2026年优化建议"><a href="#🎯-2026年优化建议" class="headerlink" title="🎯 2026年优化建议"></a><strong>🎯 2026年优化建议</strong></h3><ol>
+<li><strong>时间管理</strong>：继续保持下午+晚上的高效时段</li>
+<li><strong>技能深化</strong>：将已掌握的Python、数据处理技能系统化整理</li>
+<li><strong>成果转化</strong>：将对话中的解决方案转化为可复用的工作模板</li>
+<li><strong>平衡发展</strong>：在技术深化的同时，关注政务场景的创新应用</li>
+</ol>
+<hr>
+<p><strong>报告生成时间</strong>：2025-12-31 20:50:12<br><strong>数据分析基于</strong>：465次对话，4,410条消息，221个活跃日</p>
+<hr>
+<p><em>报告说明：本分析基于你的实际对话数据，反映了2025年度使用DeepSeek的技术学习与工作辅助历程。</em></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>Post author:  </strong>twoken
+  </li>
+  <li class="post-copyright-link">
+      <strong>Post link: </strong>
+      <a href="http://let-ai.com/202512/556c126da616/" title="DeepSeek 2025年度使用时间分析报告">http://let-ai.com/202512/556c126da616/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/202512/1ec8ac724557/" rel="prev" title="My Year with Grok:  A Visual Creator&#39;s Annual AI Usage Report">
+                  <i class="fa fa-angle-left"></i> My Year with Grok:  A Visual Creator's Annual AI Usage Report
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/202601/9e43cbaa6a5e/" rel="next" title="微小说：鞘中之光">
+                  微小说：鞘中之光 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">twoken</span>
+  </div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

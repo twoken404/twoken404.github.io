@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="8jxADkCvjgic7e8QubnSq1fnCarsoYpVz-KP0qa-qLg">
+  <meta name="msvalidate.01" content="703C79C95F4090EA50412E7E779B3DCF">
+  <meta name="yandex-verification" content="1d508c508c8313a8">
+  <meta name="baidu-site-verification" content="codeva-BUR8XfmnHk">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"let-ai.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.26.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3973904360441679"
+     crossorigin="anonymous"></script>
+
+    <meta name="description" content="上周末，我的个人博客 let-ai.com">
+<meta property="og:type" content="article">
+<meta property="og:title" content="github pages + cloudflare 301重定向修复手记">
+<meta property="og:url" content="http://let-ai.com/202601/2009ff5681a5/index.html">
+<meta property="og:site_name" content="AI微小说">
+<meta property="og:description" content="上周末，我的个人博客 let-ai.com">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-01-10T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-01-26T01:03:48.800Z">
+<meta property="article:author" content="twoken">
+<meta property="article:tag" content="openai,claude,modelscope,coze,微小说">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://let-ai.com/202601/2009ff5681a5/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://let-ai.com/202601/2009ff5681a5/","path":"202601/2009ff5681a5/","title":"github pages + cloudflare 301重定向修复手记"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>github pages + cloudflare 301重定向修复手记 | AI微小说</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WJ48W3LM1R"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-WJ48W3LM1R","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js" defer></script>
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">AI微小说</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">大模型写微小说</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>Sitemap</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E8%A1%A8%E8%B1%A1%EF%BC%9A%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E7%9A%84%E2%80%9C%E9%87%8D%E5%AE%9A%E5%90%91%E9%94%99%E8%AF%AF%E2%80%9D%E8%AD%A6%E5%91%8A"><span class="nav-number">1.</span> <span class="nav-text">问题表象：搜索引擎的“重定向错误”警告</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E5%B1%82%E6%8E%92%E6%9F%A5%EF%BC%9AGitHub-Pages%E9%85%8D%E7%BD%AE%E4%B8%8EDNS%E8%AE%B0%E5%BD%95"><span class="nav-number">2.</span> <span class="nav-text">第一层排查：GitHub Pages配置与DNS记录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E5%B1%82%E6%B7%B1%E5%85%A5%EF%BC%9Assl%E8%AF%81%E4%B9%A6%E5%A4%B1%E8%B4%A5"><span class="nav-number">3.</span> <span class="nav-text">第二层深入：ssl证书失败</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E5%B1%82%E6%84%8F%E5%A4%96%EF%BC%9AHexo%E9%83%A8%E7%BD%B2%E6%B5%81%E7%A8%8B%E7%9A%84%E2%80%9C%E5%89%AF%E4%BD%9C%E7%94%A8%E2%80%9D"><span class="nav-number">4.</span> <span class="nav-text">第三层意外：Hexo部署流程的“副作用”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E7%BB%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="nav-number">5.</span> <span class="nav-text">最终解决方案</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="twoken"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">twoken</p>
+  <div class="site-description" itemprop="description">项目简介：本项目将电影台词转化为AI文学创作的灵感源泉。系统通过三个核心模块：1. 字幕抓取与清洗 → 获得纯净文本；2. 台词分段与解析 → 理解电影语境 ；3. AI识别与创作 → 输出微小说。实现从影视语言到文学作品的智能转换。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">54</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/twoken404" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;twoken404" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:admin@let-ai.com" title="E-Mail → mailto:admin@let-ai.com" rel="noopener me"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/twoken" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;twoken" rel="noopener me" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.facebook.com/twoken" title="FB Page → https:&#x2F;&#x2F;www.facebook.com&#x2F;twoken" rel="noopener me" target="_blank"><i class="fab fa-facebook fa-fw"></i>FB Page</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://let-ai.com/202601/2009ff5681a5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="twoken">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AI微小说">
+      <meta itemprop="description" content="项目简介：本项目将电影台词转化为AI文学创作的灵感源泉。系统通过三个核心模块：1. 字幕抓取与清洗 → 获得纯净文本；2. 台词分段与解析 → 理解电影语境 ；3. AI识别与创作 → 输出微小说。实现从影视语言到文学作品的智能转换。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="github pages + cloudflare 301重定向修复手记 | AI微小说">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          github pages + cloudflare 301重定向修复手记
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2026-01-11 00:00:00" itemprop="dateCreated datePublished" datetime="2026-01-11T00:00:00+08:00">2026-01-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2026-01-26 09:03:48" itemprop="dateModified" datetime="2026-01-26T09:03:48+08:00">2026-01-26</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>上周末，我的个人博客 <code>let-ai.com</code> </p>
+<span id="more"></span>
+<p>在Google Search Console中收到了“重定向错误”的警告。这触发了一场长达数小时的问题排查，最终问题核心锁定在一个经典的现代Web架构冲突上：<strong>GitHub Pages的HTTPS强制策略、Cloudflare的代理规则与Hexo静态生成器的部署流程，三者间产生了意料之外的相互抵消</strong>。本文将复盘整个排查与修复过程。</p>
+<h2 id="问题表象：搜索引擎的“重定向错误”警告"><a href="#问题表象：搜索引擎的“重定向错误”警告" class="headerlink" title="问题表象：搜索引擎的“重定向错误”警告"></a>问题表象：搜索引擎的“重定向错误”警告</h2><p>最初，症状很明确：Google认为我的网站 <code>let-ai.com</code> 存在不正确的重定向。使用 <code>curl</code> 命令进行诊断，发现了第一个异常：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">curl -I http://let-ai.com</span><br><span class="line"><span class="comment"># 期望：HTTP/1.1 301 Moved Permanently</span></span><br><span class="line"><span class="comment"># 实际：返回了308</span></span><br></pre></td></tr></table></figure>
+
+<p>这意味着，当用户或搜索引擎通过HTTP协议访问时，网站没有返回一个标准的永久重定向(<code>301</code>)到HTTPS版本，这不利于SEO权重传递和用户体验。</p>
+<h2 id="第一层排查：GitHub-Pages配置与DNS记录"><a href="#第一层排查：GitHub-Pages配置与DNS记录" class="headerlink" title="第一层排查：GitHub Pages配置与DNS记录"></a>第一层排查：GitHub Pages配置与DNS记录</h2><p>我的网站 <code>let-ai.com</code> 托管在 <strong>GitHub Pages</strong> 上，背后是 <code>twoken404.github.io</code> 仓库，并使用 <strong>Cloudflare</strong> 管理DNS和提供CDN加速。因此，排查从这两处开始。</p>
+<ol>
+<li><strong>GitHub Pages设置</strong>：进入仓库的 <code>Settings -&gt; Pages</code>，发现“Custom domain”一栏有时为空，有时设置了 <code>let-ai.com</code>，但下方的 <strong>“Enforce HTTPS”</strong> 复选框经常是灰色不可选状态。这是关键线索，表明GitHub无法为此域名自动签发SSL证书。</li>
+<li><strong>Cloudflare DNS检查</strong>：在Cloudflare控制台检查 <code>let-ai.com</code> 的DNS记录。发现了一条<code>CNAME</code>记录指向 <code>twoken404.github.io</code>，但<strong>代理状态为“DNS only”（灰色云朵）</strong>。这意味着Cloudflare只负责DNS解析，流量没有经过它的代理网络，直接到达GitHub。</li>
+</ol>
+<h2 id="第二层深入：ssl证书失败"><a href="#第二层深入：ssl证书失败" class="headerlink" title="第二层深入：ssl证书失败"></a>第二层深入：ssl证书失败</h2><p>单独看每项配置似乎都没大问题，但组合起来就形成了死结：</p>
+<ul>
+<li><strong>症结一：证书签发失败</strong>。GitHub Pages要为自定义域名启用HTTPS，其合作方(Let‘s Encrypt)需要能通过HTTP访问到你的域名以验证所有权。但由于我的DNS是“DNS only”，验证请求可能无法可靠抵达GitHub，导致证书签发失败，从而“Enforce HTTPS”选项失效。</li>
+<li><strong>症结二：缺少代理层重定向</strong>。Cloudflare的“Always Use HTTPS”重定向功能，<strong>必须在代理开启（Proxied）状态下才生效</strong>。我的“DNS only”设置使得这一层重定向完全缺失。</li>
+</ul>
+<h2 id="第三层意外：Hexo部署流程的“副作用”"><a href="#第三层意外：Hexo部署流程的“副作用”" class="headerlink" title="第三层意外：Hexo部署流程的“副作用”"></a>第三层意外：Hexo部署流程的“副作用”</h2><p>在修复DNS，将代理状态改为“Proxied”，并成功在GitHub Pages启用HTTPS后，问题曾一度解决。但几天后，<strong>自定义域名设置再次从GitHub页面中消失</strong>。</p>
+<p>经过复盘，发现了一个隐藏的“操作冲突”：我使用 <strong>Hexo</strong> 静态博客框架，通过 <code>hexo deploy</code> 命令部署。该命令会将本地 <code>public</code> 文件夹的内容推送到GitHub仓库的<code>gh-pages</code>分支。而GitHub Pages的在线域名设置，<strong>实质上是在该分支根目录自动生成一个 <code>CNAME</code> 文件</strong>。</p>
+<p><strong>冲突就在这里</strong>：我的Hexo本地项目源文件中，没有包含 <code>CNAME</code> 文件。因此，每次执行 <code>hexo deploy</code>，新生成的 <code>public</code> 文件夹（不含<code>CNAME</code>文件）都会覆盖GitHub上的<code>gh-pages</code>分支，<strong>顺手就把GitHub自动生成的 <code>CNAME</code> 文件删除了</strong>。这个文件一消失，GitHub Pages就认为我取消了自定义域名，于是设置页面里的记录也随之清空。</p>
+<h2 id="最终解决方案"><a href="#最终解决方案" class="headerlink" title="最终解决方案"></a>最终解决方案</h2><p>修复需要确保三个地方的配置一致且稳固：</p>
+<ol>
+<li><strong>Cloudflare</strong>：确保 <code>let-ai.com</code> 的<code>CNAME</code>记录代理状态为 <strong>“Proxied”</strong>（橙色云朵）。这将激活Cloudflare的“Always Use HTTPS”功能，在边缘网络完成第一道<code>301</code>重定向。</li>
+<li><strong>GitHub Pages</strong>：在仓库设置页重新添加 <code>let-ai.com</code> 域名，并等待其自动签发SSL证书，然后<strong>务必勾选“Enforce HTTPS”</strong>。这确保了源站层面的安全强制。</li>
+<li><strong>Hexo本地项目</strong>：在Hexo项目源文件的 <code>source/</code> 目录根层级下，<strong>手动创建一个 <code>CNAME</code> 文件</strong>，内容只有一行：<code>let-ai.com</code>。这样，每次执行 <code>hexo generate</code>，这个文件都会被复制到 <code>public</code> 文件夹，从而在部署时能永久保留在GitHub仓库中，与在线设置形成互补，防止被覆盖。</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>Post author:  </strong>twoken
+  </li>
+  <li class="post-copyright-link">
+      <strong>Post link: </strong>
+      <a href="http://let-ai.com/202601/2009ff5681a5/" title="github pages + cloudflare 301重定向修复手记">http://let-ai.com/202601/2009ff5681a5/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/202601/b628da112bc5/" rel="prev" title="《秋夕》| 算法与AI的色彩对话">
+                  <i class="fa fa-angle-left"></i> 《秋夕》| 算法与AI的色彩对话
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/202601/24e4c9b1f404/" rel="next" title="《临安春雨初霁》| 算法与AI的色彩对话">
+                  《临安春雨初霁》| 算法与AI的色彩对话 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">twoken</span>
+  </div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
