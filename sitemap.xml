@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://let-ai.com/202603/72b14d329d50/</loc>
+    
+    <lastmod>2026-03-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://let-ai.com/202603/2ed99c35276a/</loc>
     
     <lastmod>2026-03-30</lastmod>
@@ -870,6 +879,13 @@
   
   <url>
     <loc>http://let-ai.com/tags/%E9%A1%BE%E8%B4%9E%E8%A7%82/</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://let-ai.com/tags/%E6%9B%B9%E4%B8%95/</loc>
     <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
